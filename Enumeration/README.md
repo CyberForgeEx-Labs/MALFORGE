@@ -1,1 +1,1 @@
-r
+Windows OS internal enumerations
