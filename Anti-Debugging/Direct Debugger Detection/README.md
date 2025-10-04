@@ -1,0 +1,1 @@
+Windows OS internal enumerations
