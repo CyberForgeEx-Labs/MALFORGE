@@ -1,4 +1,6 @@
-# Direct Debugger Detection Techniques
+<h1 align="center">
+    Direct Debugger Detection Techniques
+</h1>
 
 ## Overview
 
@@ -15,7 +17,7 @@ Direct debugger detection techniques explicitly check if a debugger is attached 
 
 ---
 
-## 1. IsDebuggerPresent
+## 1. [IsDebuggerPresent](https://github.com/CyberForgeEx/MalAPI-Arsenal/blob/main/Anti-Debugging/Direct%20Debugger%20Detection/IsDebuggerPresent.c)
 
 ### Description
 The simplest and fastest debugger detection method. Checks the `BeingDebugged` flag in the Process Environment Block (PEB).
@@ -25,10 +27,9 @@ The simplest and fastest debugger detection method. Checks the `BeingDebugged` f
 - Fastest execution time
 - First line of defense in most anti-debug routines
 
-
 ---
 
-## 2. NtQueryInformationProcess
+## 2. [NtQueryInformationProcess](https://github.com/CyberForgeEx/MalAPI-Arsenal/blob/main/Anti-Debugging/Direct%20Debugger%20Detection/NtQueryInformationProcess.c)
 
 ### Description
 A more sophisticated approach that can check multiple debug indicators through different information classes.
@@ -99,4 +100,6 @@ This documentation is provided for **educational and research purposes only**. U
 
 ---
 
-**Last Updated:** October 2025
+<p align="right">
+  Last Updated: October 2025
+</p>
