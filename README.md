@@ -35,20 +35,8 @@ Each API folder contains:
 
 Check the respective folders for detailed examples and usage instructions.
 
-## Contributing
-We welcome contributions to expand the MalAPI Arsenal! To contribute:
-1. Fork the repository.
-2. Add a new API demo in a dedicated folder with:
-   - Working code example
-   - README with setup and usage instructions
-   - Dependencies file (if applicable)
-3. Submit a pull request with a clear description of the API and its use case.
-
 ## Inspiration
-This project is heavily inspired by [malapi.io](https://malapi.io) by Mr. Dox, which provides an excellent resource for malware-related APIs. We aim to complement it by offering practical, hands-on code demonstrations.
-
-## License
-This project is licensed under the [MIT License](LICENSE).
+This project is heavily inspired by [malapi.io](https://malapi.io) by Mr. Dox, which provides an excellent resource for malware-related APIs. I aim to complement it by offering practical, hands-on code demonstrations.
 
 ## Contact
 For questions, suggestions, or feedback, open an issue on this repository or reach out via [mail](vasandilaksan@gmail.com).
