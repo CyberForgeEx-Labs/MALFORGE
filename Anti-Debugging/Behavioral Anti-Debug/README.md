@@ -1,1 +1,3 @@
-Windows OS internal enumerations
+<h1 align="center">
+    Direct Debugger Detection Techniques
+</h1>
