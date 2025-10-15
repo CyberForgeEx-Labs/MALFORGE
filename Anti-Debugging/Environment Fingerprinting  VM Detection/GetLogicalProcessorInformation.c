@@ -84,8 +84,4 @@ int main() {
     DetectVMAdvanced();
     
     return 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> be86cc11cbe913c7707fc5e45f59b7a5f2db7851
