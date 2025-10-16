@@ -39,6 +39,6 @@ Check the respective folders for detailed examples and usage instructions.
 This project is heavily inspired by [malapi.io](https://malapi.io) by Mr. Dox, which provides an excellent resource for malware-related APIs. I aim to complement it by offering practical, hands-on code demonstrations.
 
 ## Contact
-For questions, suggestions, or feedback, open an issue on this repository or reach out via [mail](vasandilaksan@gmail.com).
+For questions, suggestions, or feedback, open an issue on this repository or reach out via <vasandilaksan@gmail.com>.
 
 Happy analyzing, and stay safe in the cybersecurity world!
