@@ -60,7 +60,6 @@ Introduces long sleep periods that:
 - Force analysts to patch or skip delays (revealing their presence)
 
 ### Key Advantages
--  Zero false positives (doesn't detect, just delays)
 -  Simple to implement
 -  Effective against manual analysis
 -  Can be combined with actual detection methods
