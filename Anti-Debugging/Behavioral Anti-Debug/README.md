@@ -42,7 +42,7 @@ The API sets `GetLastError()` differently based on debugger presence, enabling r
 ## 2. [Sleep / SleepEx](https://github.com/CyberForgeEx/MalAPI-Arsenal/blob/main/Anti-Debugging/Behavioral%20Anti-Debug/Sleep_SleepEx.c)
 
 ### Description
-Time-based anti-analysis technique that introduces deliberate delays to frustrate manual debugging and dynamic analysis.
+Time-based and behavioural anti-analysis technique that introduces deliberate delays to frustrate manual debugging and dynamic analysis.
 
 ### Why It's Popular
 - Acts as a psychological deterrent rather than detection
