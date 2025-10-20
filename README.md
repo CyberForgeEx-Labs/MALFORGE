@@ -1,15 +1,15 @@
 <h1 align="center">
-  MALAPI-ARSENAL 
+  MALFORGE_API-ARSENAL
 </h1>
 
-Welcome to **MalAPI Arsenal**, a repository inspired by [malapi.io](https://malapi.io) by Mr. Dox. This project aims to demonstrate the usage of some of the most useful and powerful APIs for malware analysis, security research, and related purposes. Each API is showcased with clear, concise, and practical code examples to help you understand and implement them effectively.
+Welcome to **MALFORGE_API-ARSENAL**, a repository inspired by [malapi.io](https://malapi.io) by Mr. Dox. This project aims to demonstrate the usage of some of the most useful APIs for malware analysis, security research, and related purposes. Each API is showcased with clear, concise, and practical code examples to help you understand and implement them effectively.
 
 ## Purpose
 The goal of this repository is to provide a centralized collection of API demonstrations, focusing on their practical applications in malware analysis, threat intelligence, and cybersecurity. Whether you're a beginner or an experienced researcher, this arsenal equips you with ready-to-use code snippets and explanations to leverage these APIs in your projects.
 
 ## Features
 - **Curated APIs**: A handpicked selection of APIs relevant to malware analysis and cybersecurity.
-- **Code Demonstrations**: Each API comes with well-documented code examples in popular programming language.
+- **Code Demonstrations**: Each API comes with well-documented code examples in C programming language.
 - **Practical Usage**: Real-world scenarios and use cases for each API.
 - **Easy to Understand**: Clear instructions and minimal setup requirements for quick implementation.
 - **Open Source**: Contributions are welcome to expand the arsenal with more APIs and examples.
@@ -17,16 +17,16 @@ The goal of this repository is to provide a centralized collection of API demons
 ## Getting Started
 1. **Clone the Repository**:
    ```console
-   git clone https://github.com/CyberForgeEx/MalAPI-Arsenal.git
+   git clone https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL.git
    ```
 2. **Navigate to the Project**:
    ```console
-   cd MalAPI-Arsenal
+   cd MALFORGE_API-ARSENAL
    ```
 3. **Explore the APIs**: Check the individual folders for each API, which include:
    - Code examples.
-   - Usage instructions
-   - API documentation references
+   - Usage instructions.
+   - API documentation references.
 
 Each API folder contains:
 - **Example Code**: A working script demonstrating the API's usage.
@@ -36,7 +36,7 @@ Each API folder contains:
 Check the respective folders for detailed examples and usage instructions.
 
 ## Inspiration
-This project is heavily inspired by [malapi.io](https://malapi.io) by Mr. Dox, which provides an excellent resource for malware-related APIs. I aim to complement it by offering practical, hands-on code demonstrations.
+This project is heavily inspired by [malapi.io](https://malapi.io) by Mr. Dox, which provides an excellent resource for malware-related APIs. I aim to complement it by offering practical, hands-on C code demonstrations for useful APIs.
 
 ## Contact
 For questions, suggestions, or feedback, open an issue on this repository or reach out via <vasandilaksan@gmail.com>.
