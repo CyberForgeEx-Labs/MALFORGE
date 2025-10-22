@@ -1,5 +1,5 @@
 <h1 align="center">
-   <a href="https://github.com/CyberForgeEx/MalAPI-Arsenal/blob/main/Enumeration/Process%20Enumeration/RegistryEnumeration.c">Registry Enumeration Techniques</a>
+   <a href="https://github.com/CyberForgeEx/MalAPI-Arsenal/blob/main/Enumeration/Registry%20Enumeration/RegistryEnumeration.c">Registry Enumeration Techniques</a>
 </h1>
 
 ## Overview
