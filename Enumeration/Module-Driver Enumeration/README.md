@@ -21,7 +21,7 @@ Module and driver enumeration provides fundamental Windows API capabilities for 
 
 ---
 
-## 1. EnumDeviceDrivers
+## EnumDeviceDrivers
 ### Description
 Enumerates all device driver modules loaded in the system kernel, providing access to driver base addresses and driver object information.
 
@@ -53,7 +53,7 @@ Driver Address      | Driver Name
 
 ---
 
-## 3. EnumProcessModulesEx
+## EnumProcessModulesEx
 ### Description
 Extended module enumeration with support for both 32-bit and 64-bit modules in a process, particularly useful for WOW64 process analysis.
 
@@ -91,7 +91,7 @@ Module Base     | Module Name
 
 ---
 
-## 4. Module32First
+## Module32First
 ### Description
 Retrieves the first module entry from a process snapshot created by CreateToolhelp32Snapshot, providing structured module information.
 
@@ -132,7 +132,7 @@ Module Base: 0x77ef0000 | Module Size: 655360 | ntdll.dll
 
 ---
 
-## 5. Module32Next
+## Module32Next
 ### Description
 Retrieves subsequent module entries following a Module32First call, iterating through all modules in a process snapshot.
 
@@ -150,18 +150,9 @@ Retrieves subsequent module entries following a Module32First call, iterating th
 - Complete dependency mapping
 - Comprehensive module collection
 
-### Integration Pattern
-```c
-if (Module32First(hSnapshot, &moduleEntry)) {
-    do {
-        // Process module
-    } while (Module32Next(hSnapshot, &moduleEntry));
-}
-```
-
 ---
 
-## 6. GetModuleBaseNameA
+## GetModuleBaseNameA
 ### Description
 Retrieves the base name of a module loaded by a process, extracting only the filename without the full path.
 
