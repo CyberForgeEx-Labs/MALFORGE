@@ -21,7 +21,7 @@ Thread enumeration and analysis is a critical Windows API capability for discove
 
 ---
 
-## 1. Thread32First + Thread32Next
+## 1. [Thread32First + Thread32Next](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Thread%20Enumeration/ThreadEnumeration.c#L9)
 ### Description
 Retrieves thread information from a system snapshot, enabling enumeration of all threads or threads belonging to a specific process.
 
@@ -51,7 +51,7 @@ TID      | PID      | Base Priority | State
 
 ---
 
-## 2. GetProcessIdOfThread
+## 2. [GetProcessIdOfThread](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Thread%20Enumeration/ThreadEnumeration.c#L48)
 ### Description
 Retrieves the process ID that owns a specific thread, establishing the relationship between threads and their parent process.
 
@@ -78,7 +78,7 @@ Thread ID: 3420 -> Process ID: 4
 
 ---
 
-## 3. GetCurrentThread
+## 3. [GetCurrentThread](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Thread%20Enumeration/ThreadEnumeration.c#L95)
 ### Description
 Retrieves a pseudo-handle to the calling thread, useful for thread-specific operations without knowing the actual thread ID.
 
@@ -103,7 +103,7 @@ Current Process ID: 5428
 
 ---
 
-## 4. GetCurrentThreadId
+## 4. [GetCurrentThreadId](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Thread%20Enumeration/ThreadEnumeration.c#L108)
 ### Description
 Retrieves the unique identifier of the calling thread within the system.
 
@@ -125,7 +125,7 @@ Current Thread ID: 1024
 
 ---
 
-## 5. GetThreadId
+## 5. [GetThreadId](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Thread%20Enumeration/ThreadEnumeration.c#L136)
 ### Description
 Obtains the unique thread identifier from an open thread handle, converting handle references to standard thread IDs.
 
@@ -152,7 +152,7 @@ Thread Handle 0x9abc0123 -> Thread ID: 2156
 
 ---
 
-## 6. GetThreadInformation
+## 6. [GetThreadInformation](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Thread%20Enumeration/ThreadEnumeration.c#L153)
 ### Description
 Retrieves various types of information about a thread including ideal processor, and other scheduling attributes.
 
