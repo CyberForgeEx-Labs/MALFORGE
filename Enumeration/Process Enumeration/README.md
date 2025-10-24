@@ -22,7 +22,7 @@ Process enumeration and analysis is a fundamental Windows API capability for dis
 
 ---
 
-## 1. EnumProcesses + GetModuleFileNameEx
+## 1. [EnumProcesses + GetModuleFileNameEx](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Process%20Enumeration/ProcessEnumeration.c#L12)
 ### Description
 Retrieves all process IDs and combines them with process names to provide a complete process listing without detailed snapshots.
 
@@ -51,7 +51,7 @@ PID      | Process Name
 
 ---
 
-## 2. GetProcessMemoryInfo
+## 2. [GetProcessMemoryInfo](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Process%20Enumeration/ProcessEnumeration.c#L78)
 ### Description
 Retrieves memory usage statistics for a specific process including working set, peak memory, and page file usage.
 
@@ -80,7 +80,7 @@ Peak Page File: 256 KB
 
 ---
 
-## 3. GetProcessTimes
+## 3. [GetProcessTimes](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Process%20Enumeration/ProcessEnumeration.c#L111)
 ### Description
 Obtains CPU time usage and timing information for a process including kernel time, user time, and creation time.
 
@@ -108,7 +108,7 @@ Process Creation Time: 8f2c1a40:c3f5e2b0
 
 ---
 
-## 4. GetPriorityClass
+## 4. [GetPriorityClass](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Process%20Enumeration/ProcessEnumeration.c#L139)
 ### Description
 Retrieves the priority class of a process determining CPU scheduling priority.
 
@@ -137,7 +137,7 @@ Priority Class: High (0x00000080)
 
 ---
 
-## 5. EnumProcessModules + GetModuleBaseName
+## 5. [EnumProcessModules + GetModuleBaseName](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Process%20Enumeration/ProcessEnumeration.c#L188)
 ### Description
 Enumerates all DLL and EXE modules loaded by a process, revealing dependencies and library usage.
 
@@ -170,7 +170,7 @@ gdi32.dll
 
 ---
 
-## 6. GetExitCodeProcess
+## 6. [GetExitCodeProcess](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Process%20Enumeration/ProcessEnumeration.c#L233)
 ### Description
 Determines whether a process is still running and retrieves its exit code if terminated.
 
