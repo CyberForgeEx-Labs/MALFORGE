@@ -22,7 +22,7 @@ Network resource enumeration is a fundamental Windows API capability for discove
 
 ---
 
-## 1. NetShareEnum
+## 1. [NetShareEnum](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Network%20Resource%20Enumeration/NetworkResourceEnumeration.c#L40)
 ### Description
 Enumerates all network shares on a server, providing information about shared resources including disk drives, printers, and IPC resources.
 
@@ -57,7 +57,7 @@ Share #2:
 
 ---
 
-## 2. NetShareGetInfo
+## 2. [NetShareGetInfo](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Network%20Resource%20Enumeration/NetworkResourceEnumeration.c#L102)
 ### Description
 Retrieves detailed information about a specific network share including path, permissions, user limits, and current connections.
 
@@ -89,7 +89,7 @@ Share Information for 'C$':
 
 ---
 
-## 3. NetShareCheck
+## 3. [NetShareCheck](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Network%20Resource%20Enumeration/NetworkResourceEnumeration.c#L134)
 ### Description
 Determines whether a specific device (drive letter or path) is shared on the network and returns the share type.
 
@@ -118,7 +118,7 @@ Checking device 'C:':
 
 ---
 
-## 4. WNetEnumResource
+## 4. [WNetEnumResource](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Network%20Resource%20Enumeration/NetworkResourceEnumeration.c#L178)
 ### Description
 Enumerates network resources including servers, shares, domains, and workgroups in a hierarchical manner.
 
@@ -153,7 +153,7 @@ Resource #2:
 
 ---
 
-## 5. WNetAddConnection2A / WNetAddConnectionA
+## 5. [WNetAddConnection2A / WNetAddConnectionA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Network%20Resource%20Enumeration/NetworkResourceEnumeration.c#L260)
 ### Description
 Creates a connection to a network resource, optionally mapping it to a local drive letter, with support for authentication and persistent connections.
 
@@ -191,7 +191,7 @@ Attempting connection:
 
 ---
 
-## 6. GetAdaptersInfo
+## 6. [GetAdaptersInfo](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Network%20Resource%20Enumeration/NetworkResourceEnumeration.c#L300)
 ### Description
 Retrieves comprehensive information about all network adapters on the local system including IP addresses, MAC addresses, DHCP configuration, and gateway information.
 
@@ -227,7 +227,7 @@ Adapter #1:
 
 ---
 
-## 7. GetIpNetTable
+## 7. [GetIpNetTable](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Network%20Resource%20Enumeration/NetworkResourceEnumeration.c#L365)
 ### Description
 Retrieves the IP-to-physical address mapping table (ARP table), showing the relationship between IP addresses and MAC addresses on the local network.
 
