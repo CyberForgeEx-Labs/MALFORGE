@@ -1,5 +1,5 @@
 <h1 align="center">
-   <a href="https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Window-Desktop%20Enumeration/WindowDesktopEnum.c">Windows-Desktop Techniques</a>
+   <a href="https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Window-Desktop%20Enumeration/WindowDesktopEnum.c">Windows-Desktop Enumeration Techniques</a>
 </h1>
 
 ## Overview
