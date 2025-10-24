@@ -21,7 +21,7 @@ File system enumeration provides fundamental Windows API capabilities for discov
 
 ---
 
-## FindFirstFileA
+## [FindFirstFileA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/File%20System%20Enumeration/File_SysEnum.c#L32)
 ### Description
 Initiates a search for files or subdirectories in a specified directory, returning a handle for iterating through matching entries with wildcard pattern support.
 
@@ -56,7 +56,7 @@ bootstat.dat                   [FILE]
 
 ---
 
-## FindNextFileA
+## [FindNextFileA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/File%20System%20Enumeration/File_SysEnum.c#L32)
 ### Description
 Continues a file search initiated by FindFirstFileA, retrieving subsequent files or directories that match the search pattern.
 
@@ -88,7 +88,7 @@ Continues a file search initiated by FindFirstFileA, retrieving subsequent files
 
 ---
 
-## GetWindowsDirectoryA
+## [GetWindowsDirectoryA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/File%20System%20Enumeration/File_SysEnum.c#L76)
 ### Description
 Retrieves the path of the Windows installation directory, typically the location where the operating system is installed.
 
@@ -114,7 +114,7 @@ Path Length: 10 characters
 
 ---
 
-## GetSystemDirectoryA
+## [GetSystemDirectoryA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/File%20System%20Enumeration/File_SysEnum.c#L95)
 ### Description
 Retrieves the path of the System32 directory containing core Windows system files, drivers, and critical system components.
 
@@ -140,7 +140,7 @@ Path Length: 20 characters
 
 ---
 
-## PathFileExistsA
+## [PathFileExistsA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/File%20System%20Enumeration/File_SysEnum.c#L114)
 ### Description
 Determines whether a specified file or directory exists on the file system, providing simple boolean existence verification.
 
@@ -173,7 +173,7 @@ C:\Program Files                              [YES]
 
 ---
 
-## GetLogicalDrives
+## [GetLogicalDrives](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/File%20System%20Enumeration/File_SysEnum.c#L136)
 ### Description
 Retrieves a bitmask representing all available logical drives on the system, where each bit corresponds to a drive letter from A to Z.
 
@@ -211,7 +211,7 @@ E:\        Removable
 
 ---
 
-## GetDriveTypeA
+## [GetDriveTypeA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/File%20System%20Enumeration/File_SysEnum.c#L159)
 ### Description
 Determines the type of a specified drive, distinguishing between fixed disks, removable media, network drives, and other storage types.
 
