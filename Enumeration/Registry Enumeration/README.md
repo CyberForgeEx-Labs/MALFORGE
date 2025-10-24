@@ -21,7 +21,7 @@ Registry enumeration and analysis is a fundamental Windows API capability for di
 
 ---
 
-## 1. RegEnumKeyExA
+## 1. [RegEnumKeyExA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Registry%20Enumeration/RegistryEnumeration.c#L97)
 ### Description
 Enumerates subkeys of an open registry key with extended information including timestamps and class names. This is the preferred modern API for subkey enumeration.
 
@@ -56,7 +56,7 @@ Index  Subkey Name                              Last Write Time
 
 ---
 
-## 2. RegEnumValueA
+## 2. [RegEnumValueA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Registry%20Enumeration/RegistryEnumeration.c#L144)
 ### Description
 Enumerates all values within a registry key, retrieving value names, types, and data sizes. Essential for discovering what configuration data exists in a key.
 
@@ -101,7 +101,7 @@ Index  Value Name                       Type                      Data Size
 
 ---
 
-## 3. RegEnumKeyA (Legacy) old api
+## 3. [RegEnumKeyA (Legacy) old api](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Registry%20Enumeration/RegistryEnumeration.c#L212)
 ### Description
 Legacy API for enumerating subkeys of a registry key. Provides basic functionality without extended information. Superseded by `RegEnumKeyExA` but still widely supported.
 
@@ -139,7 +139,7 @@ Modern applications should prefer `RegEnumKeyExA` for extended functionality.
 
 ---
 
-## 4. RegQueryInfoKeyA
+## 4. [RegQueryInfoKeyA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Registry%20Enumeration/RegistryEnumeration.c#L252)
 ### Description
 Retrieves comprehensive metadata about a registry key including counts, sizes, and timestamps. Essential for understanding key structure before enumeration.
 
@@ -191,7 +191,7 @@ Retrieves comprehensive metadata about a registry key including counts, sizes, a
 
 ---
 
-## 5. RegQueryMultipleValuesA
+## 5. [RegQueryMultipleValuesA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Registry%20Enumeration/RegistryEnumeration.c#L308)
 ### Description
 Efficiently queries multiple registry values in a single operation, reducing overhead compared to multiple individual queries. Optimized for batch operations.
 
@@ -235,7 +235,7 @@ Reduces context switches and system call overhead by ~60% compared to individual
 
 ---
 
-## 6. RegQueryValueExA
+## 6. [RegQueryValueExA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Registry%20Enumeration/RegistryEnumeration.c#L370)
 ### Description
 Queries data for a specific registry value by name. The most commonly used API for reading individual registry values and their associated data.
 
@@ -281,7 +281,7 @@ Queries data for a specific registry value by name. The most commonly used API f
 
 ---
 
-## 7. GetCurrentHwProfileA
+## 7. [GetCurrentHwProfileA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Registry%20Enumeration/RegistryEnumeration.c#L425)
 ### Description
 Retrieves information about the current hardware profile, including docking state and profile identification. Useful for adaptive configuration based on hardware state.
 
