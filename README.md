@@ -4,7 +4,7 @@
 
 ## Overview
 
-MalForge API Arsenal is a structured collection of Windows API implementations organized according to malware analysis taxonomy. This project serves as a reference implementation for security researchers, malware analysts, and developers building defensive security solutions.
+MalForge API Arsenal is a structured collection of Windows API implementations organized according to malware analysis taxonomy. This project serves as a reference implementation for security researchers, malware analysts, developers and curious learners for building defensive or offensive security solutions.
 
 ## Project Structure
 
@@ -44,7 +44,7 @@ This repository contains implementations of sensitive techniques that could be m
 ### Prerequisites
 
 - Windows operating system (Windows 10/11 recommended)
-- Visual Studio 2019 or later (for C/C++ projects)
+- Visual Studio 2019 or later.
 - Administrator privileges (for certain API demonstrations)
 - Understanding of Windows API and security concepts
 
@@ -52,7 +52,7 @@ This repository contains implementations of sensitive techniques that could be m
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/MALFORGE.git
+git clone https://github.com/CyberForgeEx/MALFORGE.git
 
 # Navigate to specific category
 cd MALFORGE/..
@@ -71,7 +71,7 @@ Each category contains detailed documentation covering:
 
 ## Disclaimer
 
-The techniques demonstrated in this repository are powerful and can be harmful if misused. The authors and contributors are not responsible for any misuse or damage caused by this code. This project is intended solely for educational purposes and authorized security research.
+The techniques demonstrated in this repository are powerful and can be harmful if misused. The author and contributors are not responsible for any misuse or damage caused by this code. This project is intended solely for educational purposes and authorized security research.
 
 ## Resources
 
@@ -81,9 +81,8 @@ The techniques demonstrated in this repository are powerful and can be harmful i
 
 ## Acknowledgments
 
-- MALAPI.io for the comprehensive API categorization
-- Security research community for documented techniques
-- Microsoft for extensive API documentation
+- MALAPI.io for the comprehensive API categorization.
+- Microsoft for extensive API documentation.
 
 ---
 
