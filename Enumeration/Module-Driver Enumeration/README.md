@@ -21,7 +21,7 @@ Module and driver enumeration provides fundamental Windows API capabilities for 
 
 ---
 
-## EnumDeviceDrivers
+## [EnumDeviceDrivers](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Module-Driver%20Enumeration/Module_DriverEnum.c#L14)
 ### Description
 Enumerates all device driver modules loaded in the system kernel, providing access to driver base addresses and driver object information.
 
@@ -53,7 +53,7 @@ Driver Address      | Driver Name
 
 ---
 
-## EnumProcessModulesEx
+## [EnumProcessModulesEx](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Module-Driver%20Enumeration/Module_DriverEnum.c#L73)
 ### Description
 Extended module enumeration with support for both 32-bit and 64-bit modules in a process, particularly useful for WOW64 process analysis.
 
@@ -91,7 +91,7 @@ Module Base     | Module Name
 
 ---
 
-## Module32First
+## [Module32First](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Module-Driver%20Enumeration/Module_DriverEnum.c#L114)
 ### Description
 Retrieves the first module entry from a process snapshot created by CreateToolhelp32Snapshot, providing structured module information.
 
@@ -132,7 +132,7 @@ Module Base: 0x77ef0000 | Module Size: 655360 | ntdll.dll
 
 ---
 
-## Module32Next
+## [Module32Next](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Module-Driver%20Enumeration/Module_DriverEnum.c#L114)
 ### Description
 Retrieves subsequent module entries following a Module32First call, iterating through all modules in a process snapshot.
 
@@ -152,7 +152,7 @@ Retrieves subsequent module entries following a Module32First call, iterating th
 
 ---
 
-## GetModuleBaseNameA
+## [GetModuleBaseNameA](https://github.com/CyberForgeEx/MALFORGE_API-ARSENAL/blob/main/Enumeration/Module-Driver%20Enumeration/Module_DriverEnum.c#L146)
 ### Description
 Retrieves the base name of a module loaded by a process, extracting only the filename without the full path.
 
