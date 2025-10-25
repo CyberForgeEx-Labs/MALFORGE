@@ -22,7 +22,7 @@ Window and desktop enumeration is a fundamental Windows API capability for disco
 
 ---
 
-## 1. EnumWindows
+## 1. [EnumWindows](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Window-Desktop%20Enumeration/WindowDesktopEnum.c#L26)
 ### Description
 Enumerates all top-level windows on the screen by passing the handle to each window to an application-defined callback function. This provides a system-wide view of all visible and hidden windows.
 
@@ -60,7 +60,7 @@ Statistics:
 
 ---
 
-## 2. EnumDesktopWindows
+## 2. [EnumDesktopWindows](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Window-Desktop%20Enumeration/WindowDesktopEnum.c#L124)
 ### Description
 Enumerates all top-level windows associated with a specific desktop. This allows for desktop-scoped enumeration, useful in multi-desktop environments or terminal services scenarios.
 
