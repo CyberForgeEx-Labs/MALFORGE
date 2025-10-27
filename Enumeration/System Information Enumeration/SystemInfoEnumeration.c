@@ -503,6 +503,7 @@ void SystemSummary() {
     }
     
     // OS Version
+    
     HMODULE ntdll = GetModuleHandleA("ntdll.dll");
     if (ntdll) {
         RtlGetVersionPtr RtlGetVersion = (RtlGetVersionPtr)GetProcAddress(ntdll, "RtlGetVersion");
