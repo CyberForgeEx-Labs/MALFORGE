@@ -18,7 +18,7 @@ User and account enumeration is a critical Windows API capability for discoverin
 
 ---
 
-## 1. GetUserNameA
+## 1. [GetUserNameA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/User-Account%20Enumeration/UserAccountEnumeration.c#L44)
 ### Description
 Retrieves the user name associated with the current thread. This function returns the name of the user account under which the current process or thread is running, providing essential identity information for the executing context.
 
@@ -51,7 +51,7 @@ Context:
 
 ---
 
-## 2. GetComputerNameA
+## 2. [GetComputerNameA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/User-Account%20Enumeration/UserAccountEnumeration.c#L66)
 ### Description
 Retrieves the NetBIOS name of the local computer. This is the network identification name used for file sharing and network communication. Extended versions can retrieve DNS hostnames and fully qualified domain names.
 
@@ -85,7 +85,7 @@ Context:
 
 ---
 
-## 3. LookupAccountNameA
+## 3. [LookupAccountNameA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/User-Account%20Enumeration/UserAccountEnumeration.c#L107)
 ### Description
 Accepts an account name and retrieves the corresponding security identifier (SID), domain name, and account type. This is a fundamental API for translating human-readable names into system security identifiers used by Windows for access control.
 
@@ -142,7 +142,7 @@ NETWORK SERVICE      S-1-5-20 (Well-Known Group)
 
 ---
 
-## 4. LookupPrivilegeValueA
+## 4. [LookupPrivilegeValueA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/User-Account%20Enumeration/UserAccountEnumeration.c#L210)
 ### Description
 Retrieves the locally unique identifier (LUID) for a specified privilege name. Privileges control what system-level operations an access token can perform. This function translates privilege constant names into their numeric identifiers.
 
