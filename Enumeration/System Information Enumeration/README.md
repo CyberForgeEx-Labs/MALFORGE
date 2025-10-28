@@ -22,7 +22,7 @@ System information enumeration is a fundamental Windows API capability for disco
 
 ---
 
-## 1. GetLogicalProcessorInformation
+## 1. [GetLogicalProcessorInformation](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/System%20Information%20Enumeration/SystemInfoEnumeration.c#L35)
 ### Description
 Retrieves information about logical processors and their relationships, including processor cores, NUMA nodes, caches, and processor packages. This provides detailed CPU topology information.
 
@@ -65,7 +65,7 @@ Processor Summary:
 
 ---
 
-## 2. GetLogicalProcessorInformationEx
+## 2. [GetLogicalProcessorInformationEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/System%20Information%20Enumeration/SystemInfoEnumeration.c#L117)
 ### Description
 Extended version providing detailed processor information including efficiency classes (for hybrid architectures), processor groups, and enhanced cache details. Supports modern CPUs with heterogeneous cores.
 
@@ -104,7 +104,7 @@ Extended Summary:
 
 ---
 
-## 3. GetNativeSystemInfo
+## 3. [GetNativeSystemInfo](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/System%20Information%20Enumeration/SystemInfoEnumeration.c#L207)
 ### Description
 Retrieves information about the native system architecture, including processor type, page size, address space limits, and the actual hardware architecture regardless of WOW64 emulation.
 
@@ -147,7 +147,7 @@ Active Processor Mask: 0xFF
 
 ---
 
-## 4. GetSystemDefaultLangID
+## 4. [GetSystemDefaultLangID](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/System%20Information%20Enumeration/SystemInfoEnumeration.c#L255)
 ### Description
 Retrieves the default language identifier for the system, providing information about the primary language and sublanguage configuration.
 
@@ -185,7 +185,7 @@ System Country Name: United States
 
 ---
 
-## 5. GetVersionExA & RtlGetVersion
+## 5. [GetVersionExA & RtlGetVersion](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/System%20Information%20Enumeration/SystemInfoEnumeration.c#L286)
 ### Description
 Two methods for retrieving Windows version information. GetVersionExA is deprecated and may return incorrect values due to application compatibility shims. RtlGetVersion provides accurate version information.
 
@@ -229,7 +229,7 @@ Windows Version: Windows 11 (Build 22631)
 
 ---
 
-## 6. IsWoW64Process
+## 6. [IsWoW64Process](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/System%20Information%20Enumeration/SystemInfoEnumeration.c#L346)
 ### Description
 Determines whether a process is running under WOW64 (Windows 32-bit on Windows 64-bit) emulation, indicating a 32-bit process on 64-bit Windows.
 
@@ -267,7 +267,7 @@ Process Architecture Details:
 
 ---
 
-## 7. GetDriveTypeA
+## 7. [GetDriveTypeA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/System%20Information%20Enumeration/SystemInfoEnumeration.c#L399)
 ### Description
 Retrieves the type of drive for a specified root directory, distinguishing between fixed drives, removable media, network drives, and optical drives.
 
