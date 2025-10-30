@@ -18,7 +18,7 @@ Resource enumeration is a critical Windows API capability for discovering and an
 
 ---
 
-## 1. EnumResourceTypesA
+## 1. [EnumResourceTypesA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Resource%20Enumeration/ResourceEnumeration.c#L33)
 ### Description
 Enumerates all resource types contained within a module (EXE or DLL). Resources include icons, bitmaps, dialogs, menus, version information, and custom data embedded in the PE file.
 
@@ -52,7 +52,7 @@ Enumerates all resource types contained within a module (EXE or DLL). Resources 
 
 ---
 
-## 2. EnumResourceTypesExA
+## 2. [EnumResourceTypesExA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Resource%20Enumeration/ResourceEnumeration.c#L55)
 ### Description
 Extended version of resource type enumeration that provides additional language and localization support. Allows filtering resources by language identifier (LANGID) for multilingual applications.
 
@@ -88,7 +88,7 @@ Extended version of resource type enumeration that provides additional language 
 
 ---
 
-## 3. FindFirstUrlCacheEntryA
+## 3. [FindFirstUrlCacheEntryA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Resource%20Enumeration/ResourceEnumeration.c#L81)
 ### Description
 Retrieves the first entry from the Internet Explorer/WinINet URL cache. This cache stores temporary Internet files, cookies, history, and other web-related data.
 
@@ -143,7 +143,7 @@ Entry #1:
 
 ---
 
-## 4. FindNextUrlCacheEntryA
+## 4. [FindNextUrlCacheEntryA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Resource%20Enumeration/ResourceEnumeration.c#L81)
 ### Description
 Continues enumeration of URL cache entries after FindFirstUrlCacheEntryA. Used in a loop to traverse all cached items in the Internet Explorer/WinINet cache database.
 
