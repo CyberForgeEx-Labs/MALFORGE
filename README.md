@@ -10,14 +10,30 @@ MalForge API Arsenal is a structured collection of Windows API implementations o
 
 The repository is organized into the following categories based on common API usage patterns:
 
-### 📁 Core Categories
-
-- **Anti-Debugging** - Techniques for detecting debugger presence and analysis environments
-- **Enumeration** - System reconnaissance and information gathering APIs
-- **Evasion** - Defense evasion and detection avoidance mechanisms
-- **Injection** - Process and code injection methodologies
-- **Ransomware** - File encryption and system manipulation APIs
-- **Spying** - Data collection and monitoring capabilities
+```mermaid
+flowchart LR
+    A[MalAPI-Arsenal] --> B["**Anti-Debug**"]
+    A --> C["**Enumeration**"]
+    A --> D["**Evasion**"]
+    A --> E["**Injection**"]
+    A --> F["**Ransomware**"]
+    A --> G["**Spying**"]
+    
+    click B "https://github.com/CyberForgeEx/MALFORGE/tree/main/Anti-Debugging" "View Anti-Debugging Techniques"
+    click C "https://github.com/CyberForgeEx/MALFORGE/tree/main/Enumeration" "View Enumeration Methods"
+    click D "https://github.com/CyberForgeEx/MalAPI-Arsenal/tree/main/Evasion" "View Evasion Techniques"
+    click E "https://github.com/CyberForgeEx/MalAPI-Arsenal/tree/main/Injection" "View Injection Methods"
+    click F "https://github.com/CyberForgeEx/MalAPI-Arsenal/tree/main/Ransomware" "View Ransomware Modules"
+    click G "https://github.com/CyberForgeEx/MalAPI-Arsenal/tree/main/Spying" "View Spying Capabilities"
+    
+    style A fill:#000000,color:#00ff00,stroke:#00ff00,stroke-width:2px
+    style B fill:#1a1a1a,color:#ff5555,stroke:#ff5555
+    style C fill:#1a1a1a,color:#55ffff,stroke:#55ffff
+    style D fill:#1a1a1a,color:#ffff55,stroke:#ffff55
+    style E fill:#1a1a1a,color:#ff55ff,stroke:#ff55ff
+    style F fill:#1a1a1a,color:#55ff55,stroke:#55ff55
+    style G fill:#1a1a1a,color:#5555ff,stroke:#5555ff
+```
 
 ## Purpose
 
