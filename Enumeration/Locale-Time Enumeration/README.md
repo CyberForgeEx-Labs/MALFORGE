@@ -17,7 +17,7 @@ Locale and time enumeration provides critical Windows API capabilities for query
 
 ---
 
-## 1. GetSystemTime
+## 1. [GetSystemTime](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Locale-Time%20Enumeration/LocalTimeEnumeration.c#L12)
 ### Description
 Retrieves the current system time in Coordinated Universal Time (UTC). The function fills a SYSTEMTIME structure with date and time components including year, month, day, hour, minute, second, and milliseconds. This provides a human-readable format for system time.
 
@@ -59,7 +59,7 @@ STRUCTURE DETAILS:
 
 ---
 
-## 2. GetSystemTimeAsFileTime
+## 2. [GetSystemTimeAsFileTime](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Locale-Time%20Enumeration/LocalTimeEnumeration.c#L49)
 ### Description
 Retrieves the current system time as a FILETIME structure. FILETIME represents time as a 64-bit value containing 100-nanosecond intervals since January 1, 1601 UTC. This is the most efficient Windows API for obtaining high-resolution timestamps and is widely used in file systems and system logging.
 
@@ -106,7 +106,7 @@ Time: 14:32:45.789 UTC
 
 ---
 
-## 3. GetThreadLocale
+## 3. [GetThreadLocale](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Locale-Time%20Enumeration/LocalTimeEnumeration.c#L102)
 ### Description
 Retrieves the locale identifier (LCID) for the calling thread. The LCID identifies the language, country, and cultural conventions used for formatting dates, times, numbers, and currency. Each thread can have its own locale setting, which affects string operations, sorting, and formatting behavior.
 
