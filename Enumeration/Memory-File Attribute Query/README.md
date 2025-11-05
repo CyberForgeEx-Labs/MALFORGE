@@ -19,7 +19,7 @@ Memory and file attribute query APIs provide essential Windows capabilities for 
 
 ---
 
-## 1. ReadProcessMemory
+## 1. [ReadProcessMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Memory-File%20Attribute%20Query/Memory-File_Attribute.c#L15)
 ### Description
 Reads data from a specified memory region in a target process. This API enables inter-process memory access, allowing one process to read the memory contents of another. Requires appropriate access rights (PROCESS_VM_READ) to the target process. Commonly used for debugging, process monitoring, and memory analysis.
 
@@ -57,7 +57,7 @@ ReadProcessMemory - Reading Memory from Current Process
 
 ---
 
-## 2. ReadFile
+## 2. [ReadFile](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Memory-File%20Attribute%20Query/Memory-File_Attribute.c#L59)
 ### Description
 Reads data from a file, device, or pipe. This is the primary API for file I/O operations in Windows. Supports synchronous and asynchronous operations, and can read from various types of handles including disk files, pipes, communication devices, and console buffers. Returns the actual number of bytes read.
 
@@ -99,7 +99,7 @@ ReadFile - Reading Data from File
 
 ---
 
-## 3. VirtualQueryEx
+## 3. [VirtualQueryEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Memory-File%20Attribute%20Query/Memory-File_Attribute.c#L142)
 ### Description
 Retrieves information about a range of pages in the virtual address space of a specified process. Returns detailed memory attributes including base address, size, protection flags, state (committed/reserved/free), and type (private/mapped/image). Essential for memory mapping, allocation tracking, and security analysis.
 
@@ -142,7 +142,7 @@ VirtualQueryEx - Querying Virtual Memory Information
 
 ---
 
-## 5. GetFileAttributesA
+## 5. [GetFileAttributesA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Memory-File%20Attribute%20Query/Memory-File_Attribute.c#L210)
 ### Description
 Retrieves file system attributes for a specified file or directory. Returns a bitmask containing flags such as read-only, hidden, system, directory, archive, compressed, and encrypted. This is a lightweight, efficient way to check file properties without opening the file. The ANSI version (A suffix) accepts single-byte character strings.
 
@@ -186,7 +186,7 @@ GetFileAttributesA - Getting File Attributes
 
 ---
 
-## 6. SearchPathA
+## 6. [SearchPathA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Enumeration/Memory-File%20Attribute%20Query/Memory-File_Attribute.c#L286)
 ### Description
 Searches for a specified file in a specified path or in standard Windows search locations. By default, searches the application directory, current directory, system directory, Windows directory, and directories in the PATH environment variable. Returns the full path of the first matching file found. The ANSI version (A suffix) uses single-byte character strings.
 
