@@ -26,7 +26,7 @@ Classic DLL injection APIs provide essential Windows capabilities for loading li
 
 ---
 
-## 1. CreateRemoteThread
+## 1. [CreateRemoteThread](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L141)
 ### Description
 Creates a thread that runs in the virtual address space of another process. This is the classic method for DLL injection, where the thread executes LoadLibraryA in the target process to load a specified DLL. Requires PROCESS_CREATE_THREAD, PROCESS_VM_OPERATION, PROCESS_VM_WRITE, and PROCESS_VM_READ access rights. The function returns immediately, and the new thread begins execution.
 
@@ -49,7 +49,7 @@ Creates a thread that runs in the virtual address space of another process. This
 
 ---
 
-## 2. CreateRemoteThreadEx
+## 2. [CreateRemoteThreadEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L235)
 ### Description
 Extended version of CreateRemoteThread that provides additional control over thread creation through attribute lists. Allows specification of advanced thread attributes such as security descriptors, ideal processor, and thread flags. Offers more flexibility than the standard CreateRemoteThread for modern injection scenarios. Available on Windows Vista and later.
 
@@ -71,7 +71,7 @@ Extended version of CreateRemoteThread that provides additional control over thr
 
 ---
 
-## 3. NtCreateThreadEx
+## 3. [NtCreateThreadEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L326)
 ### Description
 Native API function from ntdll.dll for creating threads in remote processes. This undocumented API provides lower-level control over thread creation and is often used to bypass detection mechanisms that monitor CreateRemoteThread. Requires direct invocation via GetProcAddress and uses NTSTATUS return codes. More stealthy than kernel32 alternatives but less portable.
 
@@ -93,7 +93,7 @@ Native API function from ntdll.dll for creating threads in remote processes. Thi
 
 ---
 
-## 4. LoadLibraryA
+## 4. [LoadLibraryA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L438)
 ### Description
 Loads the specified module (DLL) into the address space of the calling process. The DLL's entry point (DllMain) is called with DLL_PROCESS_ATTACH. Used as the target function for remote thread execution in DLL injection. The ANSI version accepts single-byte character strings. Returns a module handle that can be used with GetProcAddress.
 
@@ -115,7 +115,7 @@ Loads the specified module (DLL) into the address space of the calling process. 
 
 ---
 
-## 5. LoadLibraryExA
+## 5. [LoadLibraryExA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L450)
 ### Description
 Extended version of LoadLibraryA that accepts additional flags controlling the DLL loading behavior. Flags include DONT_RESOLVE_DLL_REFERENCES (load without calling DllMain), LOAD_LIBRARY_AS_DATAFILE (load as data file), and LOAD_WITH_ALTERED_SEARCH_PATH (alternate search path). Provides fine-grained control over library loading for specialized scenarios.
 
@@ -137,7 +137,7 @@ Extended version of LoadLibraryA that accepts additional flags controlling the D
 
 ---
 
-## 6. GetModuleHandleA
+## 6. [GetModuleHandleA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L465)
 ### Description
 Retrieves a handle to a module that is already loaded in the calling process. Does not increment the module's reference count and does not load the module if it's not already present. The ANSI version accepts single-byte character strings. Essential for obtaining base addresses of system DLLs like kernel32.dll and ntdll.dll for subsequent function resolution.
 
@@ -159,7 +159,7 @@ Retrieves a handle to a module that is already loaded in the calling process. Do
 
 ---
 
-## 7. GetProcAddress
+## 7. [GetProcAddress](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L488)
 ### Description
 Retrieves the address of an exported function or variable from a specified DLL. Returns a pointer that can be cast to the appropriate function type. Used in DLL injection to obtain the address of LoadLibraryA for remote thread execution. Function names are case-sensitive. Can also retrieve exports by ordinal number.
 
@@ -181,7 +181,7 @@ Retrieves the address of an exported function or variable from a specified DLL. 
 
 ---
 
-## 8. WriteProcessMemory
+## 8. [WriteProcessMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L179)
 ### Description
 Writes data to an area of memory in a specified process. Requires PROCESS_VM_WRITE and PROCESS_VM_OPERATION access rights. The entire write operation must occur within one memory region. Used in DLL injection to write the DLL path string into the target process's memory space before creating a remote thread.
 
@@ -203,7 +203,7 @@ Writes data to an area of memory in a specified process. Requires PROCESS_VM_WRI
 
 ---
 
-## 9. VirtualAllocEx
+## 9. [VirtualAllocEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L166)
 ### Description
 Allocates memory within the virtual address space of a specified process. Requires PROCESS_VM_OPERATION access right. Supports various allocation types (MEM_COMMIT, MEM_RESERVE) and protection flags (PAGE_READWRITE, PAGE_EXECUTE_READWRITE). Returns the base address of allocated region. Essential for allocating space for DLL paths and shellcode in target processes.
 
@@ -225,7 +225,7 @@ Allocates memory within the virtual address space of a specified process. Requir
 
 ---
 
-## 10. OpenProcess
+## 10. [OpenProcess](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L150)
 ### Description
 Opens an existing process object and returns a handle with specified access rights. Access rights include PROCESS_VM_READ, PROCESS_VM_WRITE, PROCESS_VM_OPERATION, PROCESS_CREATE_THREAD, and PROCESS_QUERY_INFORMATION. The handle must be closed with CloseHandle when no longer needed. Requires appropriate privileges based on target process security.
 
@@ -247,7 +247,7 @@ Opens an existing process object and returns a handle with specified access righ
 
 ---
 
-## 11. OpenThread
+## 11. [OpenThread](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L531)
 ### Description
 Opens an existing thread object and returns a handle with specified access rights. Common access rights include THREAD_SUSPEND_RESUME, THREAD_GET_CONTEXT, THREAD_SET_CONTEXT, and THREAD_QUERY_INFORMATION. Used for thread manipulation and monitoring. The handle must be closed with CloseHandle. Requires appropriate privileges based on thread security.
 
@@ -269,7 +269,7 @@ Opens an existing thread object and returns a handle with specified access right
 
 ---
 
-## 12. WaitForSingleObject
+## 12. [WaitForSingleObject](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Classic%20DLL%20Injection/Classic_DLL_Injection.c#L214)
 ### Description
 Waits until the specified object is in the signaled state or the timeout interval elapses. Used in DLL injection to wait for the remote thread to complete execution of LoadLibraryA. Returns WAIT_OBJECT_0 if the object is signaled, WAIT_TIMEOUT if the interval elapses, or WAIT_FAILED on error. Supports infinite timeout with INFINITE constant.
 
