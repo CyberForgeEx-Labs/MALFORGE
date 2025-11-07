@@ -76,7 +76,6 @@ void Demo_RtlCopyMemory() {
         printf("%02X ", dest[i]);
     }
 
-
     // Copy memory
     RtlCopyMemory(dest, source, 32);
 
