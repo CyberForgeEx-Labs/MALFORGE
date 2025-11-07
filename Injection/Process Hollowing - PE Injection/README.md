@@ -24,7 +24,7 @@ Process management APIs provide essential Windows capabilities for creating proc
 
 ---
 
-## 1. CreateProcessA
+## 1. [CreateProcessA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Process%20Hollowing%20-%20PE%20Injection/Process_Manipulation_Demonstration.c#L17)
 ### Description
 Creates a new process and its primary thread. The process can be created in a suspended state using the CREATE_SUSPENDED flag, allowing initialization and setup before execution begins. Provides extensive control over process creation including security attributes, environment variables, startup information, and creation flags. Returns handles to both the process and its primary thread in a PROCESS_INFORMATION structure.
 
@@ -69,7 +69,7 @@ CreateProcessA - Creating Suspended Process
 
 ---
 
-## 2. GetThreadContext
+## 2. [GetThreadContext](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Process%20Hollowing%20-%20PE%20Injection/Process_Manipulation_Demonstration.c#L61)
 ### Description
 Retrieves the context (CPU register state) of a specified thread. The context includes all general-purpose registers, instruction pointer (EIP/RIP), stack pointer (ESP/RSP), base pointer (EBP/RBP), and flags register. The thread must be suspended or owned by the calling process. Essential for debuggers to examine execution state, implement breakpoints, and perform single-stepping. Architecture-specific - different structures for x86 and x64.
 
@@ -117,7 +117,7 @@ CPU Register Values:
 
 ---
 
-## 3. SetThreadContext
+## 3. [SetThreadContext](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Process%20Hollowing%20-%20PE%20Injection/Process_Manipulation_Demonstration.c#L113)
 ### Description
 Sets the context (CPU register state) of a specified thread. Allows modification of all registers including instruction pointer to redirect execution flow. The thread must be suspended before calling this function. Commonly used by debuggers to implement features like "set next statement", modify variable values, or skip code sections. Powerful API that requires careful use to maintain program stability and correctness.
 
@@ -158,7 +158,7 @@ SetThreadContext - Modifying Thread CPU Context
 
 ---
 
-## 4. SuspendThread
+## 4. [SuspendThread](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Process%20Hollowing%20-%20PE%20Injection/Process_Manipulation_Demonstration.c#L182)
 ### Description
 Suspends the execution of a specified thread. Each call increments the thread's suspend count; the thread will not execute until the suspend count reaches zero through corresponding ResumeThread calls. Returns the previous suspend count. Used for thread synchronization, debugging, and process control. Suspended threads continue to exist but do not consume CPU time. Maximum suspend count is MAXIMUM_SUSPEND_COUNT (127).
 
@@ -184,7 +184,7 @@ Suspends the execution of a specified thread. Each call increments the thread's 
 
 ---
 
-## 5. ResumeThread
+## 5. [ResumeThread](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Process%20Hollowing%20-%20PE%20Injection/Process_Manipulation_Demonstration.c#L191)
 ### Description
 Decrements a thread's suspend count. When the suspend count reaches zero, the thread resumes execution. Returns the previous suspend count, or (DWORD)-1 on error. Each call to ResumeThread must correspond to a previous SuspendThread call. Essential counterpart to SuspendThread for process control. Does not guarantee immediate execution - thread enters ready state and waits for CPU scheduling.
 
@@ -232,7 +232,7 @@ SuspendThread / ResumeThread - Thread State Control
 
 ---
 
-## 6. VirtualAllocEx
+## 6. [VirtualAllocEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Process%20Hollowing%20-%20PE%20Injection/Process_Manipulation_Demonstration.c#L217)
 ### Description
 Allocates memory within the virtual address space of a specified process. Provides control over allocation type (MEM_COMMIT, MEM_RESERVE), size, and memory protection (PAGE_READWRITE, PAGE_EXECUTE_READWRITE). Returns the base address of the allocated region. Requires PROCESS_VM_OPERATION access right. Essential for inter-process data transfer and remote memory management. Memory is automatically freed when the process terminates.
 
@@ -278,7 +278,7 @@ VirtualAllocEx - Allocating Memory in Remote Process
 
 ---
 
-## 7. WriteProcessMemory
+## 7. [WriteProcessMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Process%20Hollowing%20-%20PE%20Injection/Process_Manipulation_Demonstration.c#L268)
 ### Description
 Writes data to a specified memory area in another process. Requires PROCESS_VM_WRITE and PROCESS_VM_OPERATION access rights. The entire write operation must occur within a single memory region with the same protection. Returns the number of bytes actually written. Used for inter-process communication, process patching, and parameter passing. Automatically handles page protection changes if possible.
 
@@ -325,7 +325,7 @@ WriteProcessMemory - Writing Data to Remote Process
 
 ---
 
-## 8. NtUnmapViewOfSection
+## 8. [NtUnmapViewOfSection](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Process%20Hollowing%20-%20PE%20Injection/Process_Manipulation_Demonstration.c#L332)
 ### Description
 Native API function from ntdll.dll that unmaps a view of a section from the virtual address space of a process. This is a lower-level API than the kernel32 equivalents. Used to unmap memory-mapped files, shared memory sections, or loaded executables. Returns NTSTATUS codes rather than Win32 error codes. Undocumented but widely used in system programming and security research.
 
@@ -351,7 +351,7 @@ Native API function from ntdll.dll that unmaps a view of a section from the virt
 
 ---
 
-## 9. NtResumeThread
+## 9. [NtResumeThread](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Process%20Hollowing%20-%20PE%20Injection/Process_Manipulation_Demonstration.c#L381)
 ### Description
 Native API version of ResumeThread from ntdll.dll. Decrements the thread's suspend count and returns the previous count. Uses NTSTATUS return codes instead of Win32 error codes. Provides identical functionality to kernel32's ResumeThread but at a lower abstraction level. Sometimes used to avoid user-mode API hooks or for direct system interaction. Returns STATUS_SUCCESS (0) on success.
 
@@ -377,7 +377,7 @@ Native API version of ResumeThread from ntdll.dll. Decrements the thread's suspe
 
 ---
 
-## 10. NtSuspendProcess
+## 10. [NtSuspendProcess](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Process%20Hollowing%20-%20PE%20Injection/Process_Manipulation_Demonstration.c#L392)
 ### Description
 Native API function that suspends all threads in a specified process. Unlike SuspendThread which targets a single thread, this suspends the entire process atomically. No direct kernel32 equivalent exists. Returns NTSTATUS codes. Commonly used in process debugging, snapshots, and system tools. More efficient than suspending each thread individually. Requires PROCESS_SUSPEND_RESUME access right.
 
