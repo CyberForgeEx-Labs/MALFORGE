@@ -18,7 +18,7 @@ Memory copy operations provide essential Windows capabilities for moving and cop
 
 ---
 
-## 1. RtlMoveMemory
+## 1. [RtlMoveMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Copy%20Operations/Memory_Copy_Operations.c#L22)
 ### Description
 Moves a block of memory from one location to another. This function properly handles overlapping source and destination buffers, making it safe for all memory move operations. Implemented as a wrapper around the memmove C runtime function. The operation is performed at the byte level and works with any data type. Also known by its macro name `MoveMemory`.
 
@@ -67,7 +67,7 @@ RtlMoveMemory - Moving Memory Block
 
 ---
 
-## 2. RtlCopyMemory
+## 2. [RtlCopyMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Copy%20Operations/Memory_Copy_Operations.c#L55)
 ### Description
 Copies a block of memory from source to destination. Optimized for non-overlapping regions but may produce undefined results if regions overlap. Implemented as a wrapper around the memcpy C runtime function. Typically faster than RtlMoveMemory for non-overlapping regions due to optimization assumptions. Also known by its macro name `CopyMemory`.
 
@@ -110,7 +110,7 @@ RtlCopyMemory - Copying Memory Block
 
 ---
 
-## 3. WriteProcessMemory
+## 3. [WriteProcessMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Copy%20Operations/Memory_Copy_Operations.c#L93)
 ### Description
 Writes data to a specified memory area in another process. Requires PROCESS_VM_WRITE and PROCESS_VM_OPERATION access rights. The entire write operation must occur within a single memory region with the same protection. Returns the number of bytes actually written. Used for inter-process communication and remote process manipulation. Automatically handles page protection changes if possible.
 
