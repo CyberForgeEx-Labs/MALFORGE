@@ -19,7 +19,7 @@ Asynchronous Procedure Call (APC) injection is a sophisticated Windows thread hi
 
 ---
 
-## 1. QueueUserAPC
+## 1. [QueueUserAPC](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/APC%20Injection/APC_Injection_Demonstration.c#L79)
 ### Description
 Adds a user-mode asynchronous procedure call (APC) to the APC queue of a specified thread. The APC function executes when the target thread enters an alertable wait state using functions like SleepEx, WaitForSingleObjectEx, or MsgWaitForMultipleObjectsEx with the bAlertable parameter set to TRUE. This is the primary documented method for user-mode APC injection. The function returns immediately after queueing; actual execution is deferred until the thread becomes alertable.
 
@@ -64,7 +64,7 @@ QueueUserAPC - Queue APC to Thread
 
 ---
 
-## 2. NtQueueApcThread
+## 2. [NtQueueApcThread](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/APC%20Injection/APC_Injection_Demonstration.c#L112)
 ### Description
 Native API function from ntdll.dll that queues an APC to a specified thread. This is the lower-level version of QueueUserAPC, providing direct access to the native NT kernel interface. Accepts three optional parameters (compared to QueueUserAPC's single parameter), allowing more complex data passing. Returns NTSTATUS codes instead of Win32 error codes. Undocumented but widely used in system programming and security research for finer control over APC behavior.
 
@@ -109,7 +109,7 @@ NtQueueApcThread - Native API APC Queueing
 
 ---
 
-## 3. NtQueueApcThreadEx
+## 3. [NtQueueApcThreadEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/APC%20Injection/APC_Injection_Demonstration.c#L156)
 ### Description
 Extended native API version of NtQueueApcThread that adds a ReserveHandle parameter for special APC queueing scenarios. Introduced in Windows Vista to support kernel-mode APCs from user mode under specific conditions. The ReserveHandle is typically NULL for standard user-mode APCs. Provides additional control over APC delivery and execution priority. Used in advanced scenarios requiring precise APC behavior control or kernel-mode APC scheduling from user mode.
 
@@ -155,7 +155,7 @@ NtQueueApcThreadEx - Extended Native APC Queueing
 
 ---
 
-## 4. NtQueueApcThreadEx2
+## 4. [NtQueueApcThreadEx2](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/APC%20Injection/APC_Injection_Demonstration.c#L202)
 ### Description
 The newest extension of the native APC queueing API, introduced in Windows 10 version 1607 (Anniversary Update). Adds an ApcFlags parameter that provides fine-grained control over APC behavior, including special APC modes and execution characteristics. Supports both user-mode and special kernel-mode APCs through flag specification. Represents the most advanced and flexible user-mode accessible APC API. May not be available on older Windows versions.
 
@@ -201,7 +201,7 @@ NtQueueApcThreadEx2 - Newer Extended APC Queueing
 
 ---
 
-## 5. OpenThread
+## 5. [OpenThread](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/APC%20Injection/APC_Injection_Demonstration.c#L250)
 ### Description
 Opens an existing thread object and returns a handle with specified access rights. Essential prerequisite for cross-process APC injection, as it provides the thread handle needed by QueueUserAPC and native APC APIs. Requires appropriate access rights (THREAD_SET_CONTEXT) to queue APCs. Can target threads in other processes if the calling process has sufficient privileges. The returned handle must be closed with CloseHandle to prevent resource leaks.
 
