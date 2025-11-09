@@ -26,7 +26,7 @@ Memory manipulation APIs provide essential Windows capabilities for allocating, 
 
 ---
 
-## 1. VirtualAlloc
+## 1. [VirtualAlloc](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L70)
 ### Description
 Allocates memory within the virtual address space of the calling process. Provides control over allocation type (MEM_COMMIT, MEM_RESERVE), size, and memory protection. Returns the base address of the allocated region. Memory is automatically freed when the process terminates. Allocations are page-aligned (typically 4KB on x86/x64). Essential for dynamic memory management, buffer allocation, and JIT compilation.
 
@@ -69,7 +69,7 @@ VirtualAlloc - Local Process Memory Allocation
 
 ---
 
-## 2. VirtualAllocEx
+## 2. [VirtualAllocEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L105)
 ### Description
 Allocates memory within the virtual address space of a specified process. Identical functionality to VirtualAlloc but operates on remote processes. Requires PROCESS_VM_OPERATION access right to the target process. Returns the base address in the remote process's address space. Essential for inter-process communication, DLL injection preparation, and process instrumentation. Memory persists until explicitly freed or process termination.
 
@@ -114,7 +114,7 @@ VirtualAllocEx - Remote Process Memory Allocation
 
 ---
 
-## 3. VirtualProtect
+## 3. [VirtualProtect](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L158)
 ### Description
 Changes the protection on a region of committed pages in the virtual address space of the calling process. Allows modification of memory access permissions (read, write, execute). Returns the previous protection value. Must operate on committed memory pages. Common use case is enabling execute permissions on JIT-compiled code or protecting sensitive data. Can affect multiple pages if the region spans page boundaries.
 
@@ -162,7 +162,7 @@ VirtualProtect - Modifying Memory Protection
 
 ---
 
-## 4. VirtualProtectEx
+## 4. [VirtualProtectEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L198)
 ### Description
 Changes the protection on a region of committed pages in the virtual address space of a specified process. Remote process equivalent of VirtualProtect. Requires PROCESS_VM_OPERATION access right. Returns previous protection value through an output parameter. Used by debuggers, process monitors, and security tools. Must specify the exact base address and size of the region to modify.
 
@@ -207,7 +207,7 @@ VirtualProtectEx - Remote Memory Protection Change
 
 ---
 
-## 5. VirtualAllocExNuma
+## 5. [VirtualAllocExNuma](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L254)
 ### Description
 Allocates memory in a specified process and binds it to a specific NUMA (Non-Uniform Memory Access) node. Provides performance benefits on NUMA systems by allocating memory physically close to the processor that will use it. Identical to VirtualAllocEx except for the additional NUMA node parameter. Available on Windows Vista and later. Returns NULL and sets ERROR_NOT_SUPPORTED if NUMA is not available.
 
@@ -253,7 +253,7 @@ VirtualAllocExNuma - NUMA-Aware Memory Allocation
 
 ---
 
-## 6. VirtualAlloc2
+## 6. [VirtualAlloc2](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L491)
 ### Description
 Enhanced version of VirtualAlloc introduced in Windows 10 version 1803. Provides additional control through extended parameters structure. Supports custom allocators, placeholder addresses, and advanced memory management scenarios. Can allocate memory for the current process or a specified process. Offers more flexibility than legacy VirtualAlloc/VirtualAllocEx APIs. Backward compatible with older allocation methods.
 
@@ -300,7 +300,7 @@ VirtualAlloc2 - Modern Memory Allocation API
 ---
 
 
-## 7. NtAllocateVirtualMemory
+## 7. [NtAllocateVirtualMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L408)
 ### Description
 Native API function from ntdll.dll that allocates memory in a process's virtual address space. Lower-level than kernel32's VirtualAlloc/VirtualAllocEx. Returns NTSTATUS codes rather than Win32 error codes. Provides direct access to the NT kernel's memory manager. Used in system programming, rootkit detection, and scenarios requiring direct NT API access. Undocumented but widely used.
 
@@ -347,7 +347,7 @@ Native API Addresses:
 
 ---
 
-## 8. NtProtectVirtualMemory
+## 8. [NtProtectVirtualMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L465)
 ### Description
 Native API function for changing memory protection. Lower-level equivalent of VirtualProtect/VirtualProtectEx. Returns NTSTATUS codes. Provides direct access to the memory manager's protection mechanisms. Used in system programming and scenarios requiring NT API access. Operates on page boundaries and can modify multiple pages atomically.
 
@@ -372,7 +372,7 @@ Native API function for changing memory protection. Lower-level equivalent of Vi
 
 ---
 
-## 9. NtReadVirtualMemory
+## 9. [NtReadVirtualMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L445)
 ### Description
 Native API function for reading memory from a process. Lower-level equivalent of ReadProcessMemory. Returns NTSTATUS codes. Provides direct access to the memory manager's read operations. Used in system programming, memory forensics, and direct NT API scenarios. Can read from any readable memory region in the target process.
 
@@ -398,7 +398,7 @@ Native API function for reading memory from a process. Lower-level equivalent of
 
 ---
 
-## 10. NtWriteVirtualMemory
+## 10. [NtWriteVirtualMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L428)
 ### Description
 Native API function for writing memory to a process. Lower-level equivalent of WriteProcessMemory. Returns NTSTATUS codes. Provides direct access to the memory manager's write operations. Used in system programming, process instrumentation, and direct NT API scenarios. Requires appropriate memory protection on the target region.
 
@@ -446,7 +446,7 @@ Native API function for writing memory to a process. Lower-level equivalent of W
 
 ---
 
-## 11. ReadProcessMemory
+## 11. [ReadProcessMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Memory%20Manipulation/Memory_Manipulation.c#L352)
 ### Description
 Reads data from a specified memory area in another process. Requires PROCESS_VM_READ access right. Returns the number of bytes actually read. Used for process monitoring, debugging, and inter-process communication. Can read from any readable memory region. Handles page protection automatically for readable pages. Essential tool for debuggers and analysis tools.
 
