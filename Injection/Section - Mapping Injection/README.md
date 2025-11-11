@@ -22,7 +22,7 @@ Section/Mapping injection techniques utilize Windows memory-mapped file objects 
 
 ---
 
-## 1. [CreateFileMappingA]
+## 1. [CreateFileMappingA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Section%20-%20Mapping%20Injection/Section_Mapping.c#L212)
 ### Description
 Creates a file mapping object for a specified file or page-file-backed memory. File mapping objects enable multiple processes to share the same memory region through mapped views. Can create named or unnamed mappings. When INVALID_HANDLE_VALUE is passed as the file handle, the mapping is backed by the system page file (anonymous mapping). The mapping object persists until all handles are closed.
 
@@ -44,7 +44,7 @@ Creates a file mapping object for a specified file or page-file-backed memory. F
 
 ---
 
-## 2. [MapViewOfFile]
+## 2. [MapViewOfFile](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Section%20-%20Mapping%20Injection/Section_Mapping.c#L243)
 ### Description
 Maps a view of a file mapping into the address space of the calling process. The view is a portion (or all) of the file mapping object. Multiple views can be created from a single file mapping object. The system chooses the base address unless MapViewOfFileEx is used. The mapped memory can be accessed like regular memory through pointer operations.
 
@@ -66,7 +66,7 @@ Maps a view of a file mapping into the address space of the calling process. The
 
 ---
 
-## 3. [MapViewOfFile2]
+## 3. [MapViewOfFile2](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Section%20-%20Mapping%20Injection/Section_Mapping.c#L287)
 ### Description
 Extended version of MapViewOfFile available on Windows Vista and later. Adds a process handle parameter allowing mapping into a different process's address space. Provides more control over the mapping operation with additional parameters for file offset and size. Useful for cross-process section mapping scenarios without requiring native API calls.
 
@@ -88,7 +88,7 @@ Extended version of MapViewOfFile available on Windows Vista and later. Adds a p
 
 ---
 
-## 4. [MapViewOfFile3]
+## 4. [MapViewOfFile3](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Section%20-%20Mapping%20Injection/Section_Mapping.c#L344)
 ### Description
 Newest mapping API introduced in Windows 10 with the most extensive parameter set. Provides extended parameters for fine-grained control over the mapping operation including allocation type, protection flags, and custom attributes. Offers maximum flexibility for advanced scenarios requiring specific memory characteristics or NUMA node preferences.
 
@@ -110,7 +110,7 @@ Newest mapping API introduced in Windows 10 with the most extensive parameter se
 
 ---
 
-## 5. [MapViewOfFileEx]
+## 5. [MapViewOfFileEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Section%20-%20Mapping%20Injection/Section_Mapping.c#L400)
 ### Description
 Maps a view of a file mapping at a specific base address in the process's address space. The requested address must be aligned on a system allocation granularity boundary (typically 64KB). If the requested address is unavailable, the function fails unless NULL is specified. Useful for scenarios requiring deterministic memory layouts or specific address ranges.
 
@@ -132,7 +132,7 @@ Maps a view of a file mapping at a specific base address in the process's addres
 
 ---
 
-## 6. [OpenFileMappingA]
+## 6. [OpenFileMappingA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Section%20-%20Mapping%20Injection/Section_Mapping.c#L440)
 ### Description
 Opens an existing named file mapping object created by another process or the same process. Does not create a new mapping if one doesn't exist. Requires the exact name of the mapping object including namespace prefix (Global\\ or Local\\). Returns a handle that can be used with MapViewOfFile to access the shared memory. Essential for inter-process communication using shared memory.
 
@@ -154,7 +154,7 @@ Opens an existing named file mapping object created by another process or the sa
 
 ---
 
-## 7. [NtCreateSection]
+## 7. [NtCreateSection](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Section%20-%20Mapping%20Injection/Section_Mapping.c#L488)
 ### Description
 Native API function from ntdll.dll for creating section objects at the kernel level. More powerful and flexible than CreateFileMappingA with additional allocation attributes like SEC_IMAGE for PE file sections. Returns NTSTATUS codes instead of Win32 error codes. Provides lower-level control and is often used in advanced injection techniques to bypass user-mode monitoring.
 
@@ -176,7 +176,7 @@ Native API function from ntdll.dll for creating section objects at the kernel le
 
 ---
 
-## 8. [NtMapViewOfSection]
+## 8. [NtMapViewOfSection](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Section%20-%20Mapping%20Injection/Section_Mapping.c#L541)
 ### Description
 Native API function for mapping section views into process address spaces. Counterpart to NtCreateSection operating at the kernel level. Allows mapping sections into remote processes without additional kernel32 APIs. Supports inherit disposition parameters for child process inheritance. More powerful than MapViewOfFile with additional control over commit size and zero bits.
 
