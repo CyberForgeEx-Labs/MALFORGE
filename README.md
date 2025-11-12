@@ -12,7 +12,7 @@ The repository is organized into the following categories based on common API us
 
 ```mermaid
 flowchart LR
-    A[MalAPI-Arsenal] --> B["**Anti-Debug**"]
+    A[MALFORGE] --> B["**Anti-Debug**"]
     A --> C["**Enumeration**"]
     A --> D["**Evasion**"]
     A --> E["**Injection**"]
