@@ -21,7 +21,7 @@ Heap manipulation techniques utilize Windows heap management APIs to dynamically
 
 ---
 
-## 1. [HeapCreate]
+## 1. [HeapCreate](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Heap%20Manipulation/Heap_Manipulation.c#L39)
 ### Description
 Creates a private heap object separate from the process's default heap. Private heaps provide isolated memory management with custom size limits and allocation strategies. The heap can be created with a fixed maximum size or as a growable heap (when max size is 0). Useful for scenarios requiring dedicated memory pools, improved locality of reference, or isolation from the default heap to prevent fragmentation. The heap exists until explicitly destroyed with HeapDestroy or the process terminates.
 
@@ -53,7 +53,7 @@ HEAP_CREATE_ENABLE_EXECUTE 0x00040000  // Enable code execution
 
 ---
 
-## 2. [HeapAlloc]
+## 2. [HeapAlloc](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Heap%20Manipulation/Heap_Manipulation.c#L76)
 ### Description
 Allocates a block of memory from a specified heap. The fastest and most efficient method for dynamic memory allocation within a heap context. Memory can be allocated with zero-initialization (HEAP_ZERO_MEMORY) or left uninitialized for performance. Supports serialized (thread-safe) and non-serialized access. Returns NULL on failure unless HEAP_GENERATE_EXCEPTIONS flag was used during heap creation. The allocated memory must be freed with HeapFree to prevent memory leaks.
 
@@ -85,7 +85,7 @@ HEAP_GENERATE_EXCEPTIONS 0x00000004 // Generate exceptions
 
 ---
 
-## 3. [HeapReAlloc]
+## 3. [HeapReAlloc](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Heap%20Manipulation/Heap_Manipulation.c#L136)
 ### Description
 Changes the size of an allocated heap block, either growing or shrinking it. If growing, the heap manager attempts to extend the existing block in place; if impossible, it allocates a new larger block, copies the existing data, and frees the old block. When shrinking, excess memory is released back to the heap. The returned pointer may differ from the original, so callers must use the returned value. Can optionally zero-initialize expanded memory regions.
 
@@ -117,7 +117,7 @@ HEAP_REALLOC_IN_PLACE_ONLY 0x00000010 // Fail if can't grow in place
 
 ---
 
-## 4. [GetProcessHeap]
+## 4. [GetProcessHeap](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Heap%20Manipulation/Heap_Manipulation.c#L179)
 ### Description
 Returns a handle to the calling process's default heap. Every process has exactly one default heap created by the system during process initialization. This heap is used by malloc/new in C/C++ runtime libraries. Thread-safe and always available. The default heap cannot be destroyed and persists for the process lifetime. Commonly used for quick, convenient memory allocations without creating custom heaps.
 
@@ -140,7 +140,7 @@ Returns a handle to the calling process's default heap. Every process has exactl
 
 ---
 
-## 5. [GetProcessHeaps]
+## 5. [GetProcessHeaps](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Heap%20Manipulation/Heap_Manipulation.c#L217)
 ### Description
 Retrieves handles to all heaps in the current process, including the default heap and any private heaps created via HeapCreate or RtlCreateHeap. Returns the number of heaps when called with NULL buffer. Useful for enumerating heap structures, analyzing memory layout, detecting heap spray attempts, or validating heap handles. The returned array may change if heaps are created or destroyed between calls.
 
@@ -163,7 +163,7 @@ Retrieves handles to all heaps in the current process, including the default hea
 
 ---
 
-## 6. [RtlCreateHeap]
+## 6. [RtlCreateHeap](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Heap%20Manipulation/Heap_Manipulation.c#L264)
 ### Description
 Native API function from ntdll.dll for creating heap objects at the kernel level. More powerful than HeapCreate with additional control over heap characteristics, including NUMA node awareness, custom locking mechanisms, and advanced allocation strategies. Provides lower-level access and is often used in rootkits, advanced exploits, and system-level code. Returns a heap handle that can be used with standard heap APIs like HeapAlloc.
 
@@ -188,7 +188,7 @@ Native API function from ntdll.dll for creating heap objects at the kernel level
 
 ---
 
-## 7. [GlobalAlloc]
+## 7. [GlobalAlloc](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Heap%20Manipulation/Heap_Manipulation.c#L316)
 ### Description
 Legacy global memory allocation function maintained for backward compatibility with 16-bit Windows. Allocates memory from the process heap with moveable or fixed attributes. Moveable memory can be relocated by the memory manager and requires locking (GlobalLock) before use. Modern applications should use HeapAlloc instead. Still used in clipboard operations, OLE/COM interfaces, and legacy code. Returns a handle (HGLOBAL) rather than a direct pointer for moveable allocations.
 
