@@ -18,7 +18,7 @@ This educational tool demonstrates Windows DLL loading and module management API
 
 ---
 
-## 1. LoadLibraryA
+## 1. [LoadLibraryA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/DLL%20Loading%20%26%20Module%20Management/DLL_Loading_module_management.c#L33)
 ### Description
 Loads the specified dynamic-link library (DLL) module into the address space of the calling process. This is the most common method for loading DLLs at runtime. The function searches for the DLL using a defined search order, maps it into memory, resolves import dependencies, and executes DllMain with DLL_PROCESS_ATTACH. Returns a module handle that can be used with GetProcAddress to retrieve function addresses. Essential for plugin architectures, optional features, and runtime extension loading.
 
@@ -40,7 +40,7 @@ Loads the specified dynamic-link library (DLL) module into the address space of 
 
 ---
 
-## 2. LoadLibraryExA
+## 2. [LoadLibraryExA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/DLL%20Loading%20%26%20Module%20Management/DLL_Loading_module_management.c#L71)
 ### Description
 Extended version of LoadLibrary that provides additional control through flags parameter. Allows loading DLLs with modified behavior such as skipping import resolution (DONT_RESOLVE_DLL_REFERENCES), loading as data file for resource inspection (LOAD_LIBRARY_AS_DATAFILE), or altering the search path. Critical for scenarios requiring precise control over loading behavior, resource-only access, or security-conscious loading. Flags can be combined for complex loading requirements.
 
@@ -62,7 +62,7 @@ Extended version of LoadLibrary that provides additional control through flags p
 
 ---
 
-## 3. LdrLoadDll
+## 3. [LdrLoadDll](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/DLL%20Loading%20%26%20Module%20Management/DLL_Loading_module_management.c#L117)
 ### Description
 Native NT API function for loading DLLs at the lowest level before reaching Win32 LoadLibrary functions. Part of the Native API (NTAPI) exposed by ntdll.dll. Uses UNICODE_STRING structures and NTSTATUS return codes instead of Win32 conventions. Provides the most direct control over DLL loading and is used internally by all higher-level loading functions. Understanding LdrLoadDll is crucial for advanced system programming, security research, and reverse engineering Windows internals.
 
@@ -84,7 +84,7 @@ Native NT API function for loading DLLs at the lowest level before reaching Win3
 
 ---
 
-## 4. GetModuleHandleA
+## 4. [GetModuleHandleA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/DLL%20Loading%20%26%20Module%20Management/DLL_Loading_module_management.c#L175)
 ### Description
 Retrieves a module handle for a DLL that is already loaded in the calling process's address space. Unlike LoadLibrary, it does NOT load the module or increment its reference count. Returns NULL if the module is not currently loaded. Special behavior: passing NULL retrieves a handle to the current executable. Essential for checking module presence, obtaining base addresses, and working with already-loaded modules without affecting reference counts or triggering additional loads.
 
