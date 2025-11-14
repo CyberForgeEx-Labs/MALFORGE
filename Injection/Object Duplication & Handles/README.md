@@ -15,7 +15,7 @@ This educational tool demonstrates Windows handle duplication APIs for legitimat
 
 ---
 
-## 1. NtDuplicateObject
+## 1.[NtDuplicateObject](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Object%20Duplication%20%26%20Handles/Object_Duplication_handles.c#L28)
 ### Description
 Native NT API function that creates a duplicate handle to an existing kernel object, potentially across process boundaries. This low-level function provides the most direct control over handle duplication in Windows. It can duplicate handles within the same process or transfer them between different processes, enabling inter-process communication and resource sharing. The function operates at the kernel level through ntdll.dll and supports various options including closing the source handle atomically (DUPLICATE_CLOSE_SOURCE) and preserving access rights (DUPLICATE_SAME_ACCESS). Understanding NtDuplicateObject is crucial for advanced system programming, process injection research, and kernel-level debugging.
 
