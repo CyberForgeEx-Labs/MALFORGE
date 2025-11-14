@@ -87,7 +87,7 @@ Each category contains detailed documentation covering:
 
 ## Disclaimer
 
-The techniques demonstrated in this repository are powerful and can be harmful if misused. The author and contributors are not responsible for any misuse or damage caused by this code. This project is intended solely for educational purposes and authorized security research.
+The techniques demonstrated in this repository are powerful and can be harmful if misused. The author not responsible for any misuse or damage caused by this code. This project is intended solely for educational purposes and authorized security research.
 
 ## Resources
 
