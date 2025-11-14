@@ -20,7 +20,7 @@ This educational tool demonstrates Windows token and privilege APIs for legitima
 
 ---
 
-## 1. OpenProcessToken
+## 1. [OpenProcessToken](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Token%20%26%20Privilege%20Manipulation/Token_Manipulation.c#L45)
 ### Description
 Opens an access token associated with a process. Access tokens contain security information including user identity, group memberships, and privileges. Opening a token with TOKEN_QUERY access allows read-only inspection without modification. This is the foundation for all token inspection operations. Tokens can be opened with various access rights depending on the intended operation - query, adjust privileges, duplicate, or impersonate.
 
@@ -42,7 +42,7 @@ Opens an access token associated with a process. Access tokens contain security 
 
 ---
 
-## 2. AdjustTokenPrivileges
+## 2. [AdjustTokenPrivileges](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Token%20%26%20Privilege%20Manipulation/Token_Manipulation.c#L185)
 ### Description
 Enables or disables privileges in an access token. Privileges control what system-level operations a process can perform (e.g., backup files, debug programs, shutdown system). This demonstration shows how to QUERY privilege status without actually modifying privileges. The function can return previous privilege states, allowing safe inspection of what could be adjusted. Critical for understanding a process's security capabilities.
 
@@ -64,7 +64,7 @@ Enables or disables privileges in an access token. Privileges control what syste
 
 ---
 
-## 3. DuplicateToken
+## 3. [DuplicateToken](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Token%20%26%20Privilege%20Manipulation/Token_Manipulation.c#L260)
 ### Description
 Creates a new duplicate access token from an existing token. The duplicate can have a different impersonation level, allowing safe inspection at lower privilege levels. SecurityIdentification level produces a token that can only be used for identity inspection, not impersonation or privilege modification. Useful for creating safe copies of tokens for analysis without risking the original token's security.
 
@@ -86,7 +86,7 @@ Creates a new duplicate access token from an existing token. The duplicate can h
 
 ---
 
-## 4. GetTokenInformation
+## 4. [GetTokenInformation](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Token%20%26%20Privilege%20Manipulation/Token_Manipulation.c#L99)
 ### Description
 Retrieves various types of information from an access token. Can query user identity, group memberships, privilege lists, token type, impersonation level, and security descriptors. Requires different buffer sizes depending on information class. Essential for comprehensive token inspection and understanding security context. Works with all token information classes defined in TOKEN_INFORMATION_CLASS enumeration.
 
@@ -108,7 +108,7 @@ Retrieves various types of information from an access token. Can query user iden
 
 ---
 
-## 5. LookupPrivilegeValue
+## 5. [LookupPrivilegeValue](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Token%20%26%20Privilege%20Manipulation/Token_Manipulation.c#L202)
 ### Description
 Retrieves the locally unique identifier (LUID) used on the local system to represent a specified privilege name. Privileges like "SeDebugPrivilege" or "SeBackupPrivilege" are referred to by name in code but identified by LUID at the system level. LUIDs are unique per system boot. Required before calling AdjustTokenPrivileges to enable/disable specific privileges. Converts human-readable privilege names to system identifiers.
 
@@ -130,7 +130,7 @@ Retrieves the locally unique identifier (LUID) used on the local system to repre
 
 ---
 
-## 6. LookupPrivilegeName
+## 6. [LookupPrivilegeName](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Token%20%26%20Privilege%20Manipulation/Token_Manipulation.c#L20)
 ### Description
 Retrieves the name that represents a specified privilege LUID. Reverse operation of LookupPrivilegeValue - converts system identifiers back to human-readable names. Essential for displaying privilege information to users and generating audit logs. Supports all standard Windows privileges including debug, backup, restore, shutdown, and administrative privileges. Buffer size automatically managed through size parameter.
 
