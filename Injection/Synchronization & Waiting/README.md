@@ -20,7 +20,7 @@ This educational demonstration for Windows synchronization and wait APIs for leg
 
 ---
 
-## 1. WaitForSingleObject
+## 1. [WaitForSingleObject](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Synchronization%20%26%20Waiting/Synchronization_waiting_operations.c#L61)
 ### Description
 The most commonly used synchronization function in Windows programming. Waits until the specified kernel object is in the signaled state or the timeout interval elapses. This function blocks the calling thread until one of these conditions occurs. It supports various kernel objects including threads, processes, events, mutexes, semaphores, and more. WaitForSingleObject is the foundation for thread synchronization, process coordination, and event-driven programming patterns in Windows applications.
 
@@ -51,7 +51,7 @@ The most commonly used synchronization function in Windows programming. Waits un
 
 ---
 
-## 2. WaitForSingleObjectEx
+## 2. [WaitForSingleObjectEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Synchronization%20%26%20Waiting/Synchronization_waiting_operations.c#L108)
 ### Description
 Extended version of WaitForSingleObject with alertable wait capability. When the `bAlertable` parameter is TRUE, the function enters an alertable wait state, allowing Asynchronous Procedure Calls (APCs) to be delivered to the waiting thread. This is crucial for I/O completion routines, user-mode APCs, and scenarios where threads must remain responsive to asynchronous events while waiting. The alertable state enables sophisticated patterns like overlapped I/O and user-scheduled work items.
 
@@ -99,7 +99,7 @@ Thread State Flow:
 
 ---
 
-## 3. WaitForMultipleObjects
+## 3. [WaitForMultipleObjects](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Synchronization%20%26%20Waiting/Synchronization_waiting_operations.c#L151)
 ### Description
 Waits for multiple kernel objects simultaneously, returning when either all objects are signaled (wait all mode) or when any single object is signaled (wait any mode). This function is essential for coordinating multiple concurrent operations, implementing complex synchronization patterns, and managing multiple resources. It can wait for up to 64 objects in a single call, making it powerful for scenarios requiring coordination across multiple threads, processes, or events.
 
@@ -150,7 +150,7 @@ Event C: ───────────────●────  (signaled
 
 ---
 
-## 4. WaitForMultipleObjectsEx
+## 4. [WaitForMultipleObjectsEx](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Synchronization%20%26%20Waiting/Synchronization_waiting_operations.c#L212)
 ### Description
 Combines the capabilities of WaitForMultipleObjects with alertable wait state support from WaitForSingleObjectEx. This powerful function enables waiting on multiple objects while remaining responsive to APCs, making it ideal for complex asynchronous I/O scenarios, concurrent operation coordination, and responsive multi-threaded applications. It supports all features of both parent functions.
 
@@ -179,7 +179,7 @@ Same as WaitForMultipleObjects, plus:
 
 ---
 
-## 5. NtWaitForSingleObject
+## 5. [NtWaitForSingleObject](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Synchronization%20%26%20Waiting/Synchronization_waiting_operations.c#L259)
 ### Description
 Native NT API function providing low-level wait operations directly at the kernel interface level. Unlike the Win32 WaitForSingleObject, this function uses NTSTATUS return codes and accepts timeout in 100-nanosecond intervals. It provides more precise control and is used internally by Win32 wait functions. Understanding this API is valuable for system-level programming, kernel research, and implementing custom synchronization primitives.
 
@@ -211,7 +211,7 @@ Native NT API function providing low-level wait operations directly at the kerne
 
 ---
 
-## 6. NtWaitForMultipleObjects
+## 6. [NtWaitForMultipleObjects](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Synchronization%20%26%20Waiting/Synchronization_waiting_operations.c#L308)
 ### Description
 Native NT API for waiting on multiple kernel objects, providing the lowest-level multi-object wait interface in Windows. This function offers precise control over wait behavior, timeout handling, and object type specification. It uses the WAIT_TYPE enumeration to specify wait-all or wait-any semantics and supports all features of the Win32 counterpart while providing native-level control.
 
