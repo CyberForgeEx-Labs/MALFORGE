@@ -1,66 +1,21 @@
-Modified MIT License — Authorized Use Only
+MIT License
 
 Copyright (c) 2025 Vasan Dilaksan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
-in the Software, including without limitation the rights to use, copy, modify,
-merge, publish, distribute, sublicense, and/or sell copies of the Software,
-and to permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. AUTHORIZED USE ONLY
-   The Software is provided for lawful, ethical, and authorized purposes only,
-   including but not limited to: security research, defensive security,
-   authorized penetration testing, education, and vulnerability analysis.
-   Before using the Software against any system, network, device, or data,
-   you must have explicit permission from the owner of the target or
-   be otherwise legally authorized to act.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-2. PROHIBITED USES (NON-EXHAUSTIVE)
-   The following uses are strictly prohibited:
-     a. Any unauthorized access to or interference with computers, networks,
-        devices, or data.
-     b. Creation, distribution, or facilitation of malware, ransomware,
-        spyware, or tools primarily intended to cause harm, extortion, or
-        theft.
-     c. Surveillance, stalking, harassment, or violation of privacy or human
-        rights.
-     d. Any use that violates applicable laws, regulations, sanctions, or
-        treaties.
-
-   If you are unsure whether your intended use is authorized, you must obtain
-   permission from the copyright holder before proceeding.
-
-3. ATTRIBUTION
-   The above copyright notice and this permission notice shall be included in
-   all copies or substantial portions of the Software.
-
-4. TERMINATION
-   This license is granted subject to your compliance with Sections 1 and 2.
-   Any breach of those sections will automatically terminate your rights under
-   this license and you must immediately stop using, copying, or distributing
-   the Software.
-
-5. NO WARRANTY
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. THE COPYRIGHT HOLDERS
-   AND CONTRIBUTORS MAKE NO REPRESENTATIONS OR WARRANTIES ABOUT THE ACCURACY,
-   COMPLETENESS, OR SUITABILITY OF THE SOFTWARE FOR ANY PURPOSE.
-
-6. LIMITATION OF LIABILITY
-   IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY
-   CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
-   OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-   USE OR OTHER DEALINGS IN THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
-   OF SUCH DAMAGE.
-
-7. COMPLIANCE WITH LAW
-   You are solely responsible for compliance with export control laws,
-   economic sanctions, and other applicable legal restrictions that may apply
-   to the possession, use, or distribution of the Software.
-
-By using, copying, modifying, or distributing the Software, you acknowledge
-that you have read, understood, and agree to be bound by the terms of this
-license.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
