@@ -21,7 +21,7 @@ This educational resource documents advanced Windows API techniques for legitima
 
 ---
 
-## 1. [SetPropA]
+## 1. [SetPropA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Specialized%20Techniques/Specialized_Techniques.c#L77)
 ### Description
 Windows API function that sets window property data, which can be exploited for "Atom bombing" injection techniques. This method involves storing malicious code or data as window properties that can be retrieved and executed by target processes. The function associates data with a window through property atoms, creating a mechanism for inter-process data transfer that can be leveraged for code execution.
 
@@ -41,7 +41,7 @@ Windows API function that sets window property data, which can be exploited for 
 
 ---
 
-## 2. [SetProcessDEPPolicy]
+## 2. [SetProcessDEPPolicy](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Specialized%20Techniques/Specialized_Techniques.c#L106)
 ### Description
 Configures the Data Execution Prevention (DEP) policy for the current process. This API allows legitimate applications to modify their DEP settings, which can be studied for understanding how to properly implement security controls or research DEP bypass techniques for defensive purposes.
 
@@ -60,7 +60,7 @@ Configures the Data Execution Prevention (DEP) policy for the current process. T
 
 ---
 
-## 3. [EnumSystemLocalesA]
+## 3. [EnumSystemLocalesA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Specialized%20Techniques/Specialized_Techniques.c#L161)
 ### Description
 Enumerates system locales using a callback function, which can be exploited for callback-based code injection. This technique leverages legitimate callback mechanisms to execute arbitrary code within the context of system API calls.
 
@@ -79,7 +79,7 @@ Enumerates system locales using a callback function, which can be exploited for 
 
 ---
 
-## 4. [UuidFromStringA]
+## 4. [UuidFromStringA](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Specialized%20Techniques/Specialized_Techniques.c#L167)
 ### Description
 Converts string UUID representations to binary format, which can be exploited for UUID shellcode execution. This technique encodes shellcode as UUID strings and uses the conversion process to decode and execute the payload in memory.
 
@@ -97,7 +97,7 @@ Converts string UUID representations to binary format, which can be exploited fo
 
 ---
 
-## 5. [DebugActiveProcessStop]
+## 5. [DebugActiveProcessStop](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Specialized%20Techniques/Specialized_Techniques.c#L204)
 ### Description
 Stops debugging of the specified process, which can be used in debug-based injection techniques. This API is part of the Windows debugging infrastructure and can be leveraged for process manipulation when combined with other debugging APIs.
 
@@ -115,7 +115,7 @@ Stops debugging of the specified process, which can be used in debug-based injec
 
 ---
 
-## 6. [LocalAlloc]
+## 6. [LocalAlloc](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Specialized%20Techniques/Specialized_Techniques.c#L248)
 ### Description
 Allocates memory from the default heap. This fundamental memory management API is essential for various process injection techniques and legitimate memory operations in Windows applications.
 
@@ -133,7 +133,7 @@ Allocates memory from the default heap. This fundamental memory management API i
 
 ---
 
-## 7. [Toolhelp32ReadProcessMemory]
+## 7. [Toolhelp32ReadProcessMemory](https://github.com/CyberForgeEx/MALFORGE/blob/main/Injection/Specialized%20Techniques/Specialized_Techniques.c#L282)
 ### Description
 Reads memory from a specified process using the Toolhelp snapshot mechanism. This provides an alternative to ReadProcessMemory for process memory inspection and manipulation.
 
