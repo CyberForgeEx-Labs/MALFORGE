@@ -6,6 +6,10 @@
 
 MalForge API Arsenal is a structured collection of Windows API implementations organized according to malware analysis taxonomy. This project serves as a reference implementation for security researchers, malware analysts, developers and curious learners for building defensive or offensive security solutions.
 
+<!-- Alignment Fix -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)   [![Platforms](https://img.shields.io/badge/Platforms-Windows-green)]() [![Category](https://img.shields.io/badge/Category-Offensive%20&%20Defensive%20Security-purple)]()
+
 ## Project Structure
 
 The repository is organized into the following categories based on common API usage patterns:
