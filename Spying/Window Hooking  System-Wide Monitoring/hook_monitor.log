@@ -1,0 +1,128 @@
+[21:55:17.615] 
+[+] Hook Monitoring Started at 2025-12-02 21:55:17
+
+[21:55:17.744] [KEYBOARD] Key UP: Enter (VK: 0x0D, Scan: 0x001C) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:17.757] 
+[21:55:19.584] [KEYBOARD] Key DOWN: Left Alt (VK: 0xA4, Scan: 0x0038) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:19.588] 
+[21:55:19.659] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:19.673] [Modifiers: [21:55:19.675] ALT [21:55:19.677] ][21:55:19.678] 
+[21:55:19.690] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: '' (Class: ForegroundStaging, PID: 12552)
+[21:55:19.700] [WINEVENT] EVENT_OBJECT_CREATE - HWND: 0x00000000000506f4, Class: OleMainThreadWndClass, Title: 'OLEChannelWnd', PID: 12552
+[21:55:19.715] [WINEVENT] EVENT_OBJECT_CREATE - HWND: 0x00000000000f05e4, Class: OleMainThreadWndClass, Title: 'OLEChannelWnd', PID: 12552
+[21:55:19.735] [WINEVENT] EVENT_OBJECT_CREATE - HWND: 0x00000000001906ac, Class: OleMainThreadWndClass, Title: 'OLEChannelWnd', PID: 12552
+[21:55:19.755] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: 'Task Switching' (Class: XamlExplorerHostIslandWindow, PID: 12552)
+[21:55:19.769] [WINEVENT] EVENT_OBJECT_CREATE - HWND: 0x00000000000d06b6, Class: OleMainThreadWndClass, Title: 'OLEChannelWnd', PID: 12552
+[21:55:19.779] [WINEVENT] EVENT_OBJECT_CREATE - HWND: 0x00000000001305e2, Class: OleMainThreadWndClass, Title: 'OLEChannelWnd', PID: 12552
+[21:55:19.800] [WINEVENT] EVENT_OBJECT_CREATE - HWND: 0x00000000004a0674, Class: OleMainThreadWndClass, Title: 'OLEChannelWnd', PID: 12552
+[21:55:19.817] [WINEVENT] EVENT_OBJECT_SHOW - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:19.835] [WINEVENT] UNKNOWN - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:19.852] [WINEVENT] UNKNOWN - HWND: 0x000000000001028e, Class: IME, Title: 'Default IME', PID: 12552
+[21:55:19.863] [WINEVENT] UNKNOWN - HWND: 0x00000000000706ba, Class: MSCTFIME UI, Title: 'MSCTFIME UI', PID: 12552
+[21:55:19.875] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:19.886] [Modifiers: [21:55:19.886] ALT [21:55:19.890] ][21:55:19.891] 
+[21:55:20.096] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:20.098] [Modifiers: [21:55:20.110] ALT [21:55:20.110] ][21:55:20.110] 
+[21:55:20.170] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:20.170] [Modifiers: [21:55:20.182] ALT [21:55:20.183] ][21:55:20.185] 
+[21:55:20.349] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:20.351] [Modifiers: [21:55:20.353] ALT [21:55:20.353] ][21:55:20.353] 
+[21:55:20.469] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:20.471] [Modifiers: [21:55:20.473] ALT [21:55:20.473] ][21:55:20.473] 
+[21:55:20.686] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:20.689] [Modifiers: [21:55:20.691] ALT [21:55:20.691] ][21:55:20.691] 
+[21:55:20.800] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:20.802] [Modifiers: [21:55:20.804] ALT [21:55:20.804] ][21:55:20.804] 
+[21:55:20.975] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:20.978] [Modifiers: [21:55:20.980] ALT [21:55:20.980] ][21:55:20.980] 
+[21:55:21.035] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:21.040] [Modifiers: [21:55:21.047] ALT [21:55:21.049] ][21:55:21.050] 
+[21:55:21.206] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:21.208] [Modifiers: [21:55:21.210] ALT [21:55:21.210] ][21:55:21.210] 
+[21:55:21.317] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:21.319] [Modifiers: [21:55:21.321] ALT [21:55:21.321] ][21:55:21.321] 
+[21:55:21.548] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:21.550] [Modifiers: [21:55:21.552] ALT [21:55:21.552] ][21:55:21.552] 
+[21:55:21.675] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:21.679] [Modifiers: [21:55:21.679] ALT [21:55:21.679] ][21:55:21.679] 
+[21:55:21.858] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:21.867] [Modifiers: [21:55:21.870] ALT [21:55:21.870] ][21:55:21.871] 
+[21:55:21.983] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:21.987] [Modifiers: [21:55:21.991] ALT [21:55:21.991] ][21:55:21.992] 
+[21:55:22.462] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:22.465] [Modifiers: [21:55:22.465] ALT [21:55:22.467] ][21:55:22.467] 
+[21:55:22.566] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:22.568] [Modifiers: [21:55:22.570] ALT [21:55:22.570] ][21:55:22.570] 
+[21:55:22.773] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:22.777] [Modifiers: [21:55:22.777] ALT [21:55:22.779] ][21:55:22.779] 
+[21:55:22.910] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:22.911] [Modifiers: [21:55:22.927] ALT [21:55:22.927] ][21:55:22.928] 
+[21:55:23.136] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:23.144] [Modifiers: [21:55:23.149] ALT [21:55:23.150] ][21:55:23.150] 
+[21:55:23.315] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:23.315] [Modifiers: [21:55:23.328] ALT [21:55:23.329] ][21:55:23.330] 
+[21:55:23.344] [KEYBOARD] Key UP: Left Alt (VK: 0xA4, Scan: 0x0038) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:23.355] [Modifiers: [21:55:23.357] ALT [21:55:23.359] ][21:55:23.359] 
+[21:55:23.379] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: '' (Class: ForegroundStaging, PID: 12552)
+[21:55:23.407] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: 'User Requests Keyboard Hooking Code without DLL Injection - DeepSeek and 4 more pages - Personal - Microsoft? Edge' (Class: Chrome_WidgetWin_1, PID: 19096)
+[21:55:23.444] [WINEVENT] EVENT_OBJECT_HIDE - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:23.470] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: 'Task Switching' (Class: XamlExplorerHostIslandWindow, PID: 12552)
+[21:55:23.470] [WINEVENT] UNKNOWN - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:23.505] [WINEVENT] UNKNOWN - HWND: 0x000000000001028e, Class: IME, Title: 'Default IME', PID: 12552
+[21:55:23.520] [WINEVENT] UNKNOWN - HWND: 0x00000000000706ba, Class: MSCTFIME UI, Title: 'MSCTFIME UI', PID: 12552
+[21:55:23.546] [WINEVENT] EVENT_OBJECT_CREATE - HWND: 0x00000000000c0682, Class: OleMainThreadWndClass, Title: 'OLEChannelWnd', PID: 12552
+[21:55:23.559] [WINEVENT] UNKNOWN - HWND: 0x0000000000060696, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:23.589] [WINEVENT] EVENT_OBJECT_SHOW - HWND: 0x0000000000060696, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:24.486] [KEYBOARD] Key DOWN: X (VK: 0x58, Scan: 0x002D) [Window: 'User Requests Keyboard Hooking Code without DLL Injection - DeepSeek and 4 more pages - Personal - Microsoft? Edge', Class: Chrome_WidgetWin_1, PID: 19096] [21:55:24.493] 
+[21:55:24.665] [KEYBOARD] Key UP: X (VK: 0x58, Scan: 0x002D) [Window: 'User Requests Keyboard Hooking Code without DLL Injection - DeepSeek and 4 more pages - Personal - Microsoft? Edge', Class: Chrome_WidgetWin_1, PID: 19096] [21:55:24.681] 
+[21:55:26.313] [WINEVENT] EVENT_OBJECT_HIDE - HWND: 0x0000000000060696, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:26.334] [WINEVENT] UNKNOWN - HWND: 0x0000000000060696, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:26.353] [WINEVENT] UNKNOWN - HWND: 0x0000000000010470, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:26.380] [WINEVENT] EVENT_OBJECT_SHOW - HWND: 0x0000000000010470, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:26.399] [WINEVENT] EVENT_OBJECT_NAMECHANGE - HWND: 0x000000000001046e, Class: Chrome_WidgetWin_1, Title: 'New tab and 4 more pages - Personal - Microsoft? Edge', PID: 19096
+[21:55:26.423] [WINEVENT] EVENT_SYSTEM_CAPTURESTART - HWND: 0x000000000001046e, Class: Chrome_WidgetWin_1, Title: 'New tab and 4 more pages - Personal - Microsoft? Edge', PID: 19096
+[21:55:26.462] [WINEVENT] EVENT_SYSTEM_CAPTUREEND - HWND: 0x000000000001046e, Class: Chrome_WidgetWin_1, Title: 'New tab and 4 more pages - Personal - Microsoft? Edge', PID: 19096
+[21:55:27.087] [WINEVENT] EVENT_SYSTEM_CAPTURESTART - HWND: 0x000000000001046e, Class: Chrome_WidgetWin_1, Title: 'New tab and 4 more pages - Personal - Microsoft? Edge', PID: 19096
+[21:55:27.182] [WINEVENT] EVENT_SYSTEM_CAPTUREEND - HWND: 0x000000000001046e, Class: Chrome_WidgetWin_1, Title: 'New tab and 4 more pages - Personal - Microsoft? Edge', PID: 19096
+[21:55:27.839] [KEYBOARD] Key DOWN: Left Alt (VK: 0xA4, Scan: 0x0038) [Window: 'New tab and 4 more pages - Personal - Microsoft? Edge', Class: Chrome_WidgetWin_1, PID: 19096] [21:55:27.845] 
+[21:55:27.895] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'New tab and 4 more pages - Personal - Microsoft? Edge', Class: Chrome_WidgetWin_1, PID: 19096] [21:55:27.911] [Modifiers: [21:55:27.911] ALT [21:55:27.911] ][21:55:27.917] 
+[21:55:27.944] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: '' (Class: ForegroundStaging, PID: 12552)
+[21:55:27.959] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: 'Task Switching' (Class: XamlExplorerHostIslandWindow, PID: 12552)
+[21:55:27.989] [WINEVENT] EVENT_OBJECT_SHOW - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:28.007] [WINEVENT] UNKNOWN - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:28.028] [WINEVENT] UNKNOWN - HWND: 0x000000000001028e, Class: IME, Title: 'Default IME', PID: 12552
+[21:55:28.041] [WINEVENT] UNKNOWN - HWND: 0x00000000000706ba, Class: MSCTFIME UI, Title: 'MSCTFIME UI', PID: 12552
+[21:55:28.055] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:28.070] [Modifiers: [21:55:28.070] ALT [21:55:28.077] ][21:55:28.077] 
+[21:55:28.413] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:28.415] [Modifiers: [21:55:28.417] ALT [21:55:28.417] ][21:55:28.417] 
+[21:55:28.516] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:28.526] [Modifiers: [21:55:28.532] ALT [21:55:28.539] ][21:55:28.542] 
+[21:55:28.698] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:28.698] [Modifiers: [21:55:28.698] ALT [21:55:28.712] ][21:55:28.712] 
+[21:55:28.796] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:28.799] [Modifiers: [21:55:28.801] ALT [21:55:28.801] ][21:55:28.801] 
+[21:55:28.821] [KEYBOARD] Key UP: Left Alt (VK: 0xA4, Scan: 0x0038) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:28.830] [Modifiers: [21:55:28.835] ALT [21:55:28.837] ][21:55:28.840] 
+[21:55:28.860] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: '' (Class: ForegroundStaging, PID: 12552)
+[21:55:28.886] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: 'New tab and 4 more pages - Personal - Microsoft? Edge' (Class: Chrome_WidgetWin_1, PID: 19096)
+[21:55:28.913] [WINEVENT] EVENT_OBJECT_HIDE - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:28.935] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: 'Task Switching' (Class: XamlExplorerHostIslandWindow, PID: 12552)
+[21:55:28.957] [WINEVENT] EVENT_OBJECT_HIDE - HWND: 0x0000000000010470, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:28.968] [WINEVENT] UNKNOWN - HWND: 0x0000000000010470, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:28.981] [WINEVENT] UNKNOWN - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:28.988] [WINEVENT] UNKNOWN - HWND: 0x000000000001028e, Class: IME, Title: 'Default IME', PID: 12552
+[21:55:29.002] [WINEVENT] UNKNOWN - HWND: 0x00000000000706ba, Class: MSCTFIME UI, Title: 'MSCTFIME UI', PID: 12552
+[21:55:29.017] [WINEVENT] UNKNOWN - HWND: 0x00000000005c04d8, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:29.030] [WINEVENT] EVENT_OBJECT_SHOW - HWND: 0x00000000005c04d8, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:29.079] [WINEVENT] EVENT_OBJECT_NAMECHANGE - HWND: 0x000000000001046e, Class: Chrome_WidgetWin_1, Title: 'Feed and 4 more pages - Personal - Microsoft? Edge', PID: 19096
+[21:55:29.234] [KEYBOARD] Key DOWN: Left Alt (VK: 0xA4, Scan: 0x0038) [Window: 'Feed and 4 more pages - Personal - Microsoft? Edge', Class: Chrome_WidgetWin_1, PID: 19096] [21:55:29.238] 
+[21:55:29.289] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Feed and 4 more pages - Personal - Microsoft? Edge', Class: Chrome_WidgetWin_1, PID: 19096] [21:55:29.296] [Modifiers: [21:55:29.296] ALT [21:55:29.296] ][21:55:29.296] 
+[21:55:29.335] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: '' (Class: ForegroundStaging, PID: 12552)
+[21:55:29.360] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: 'Task Switching' (Class: XamlExplorerHostIslandWindow, PID: 12552)
+[21:55:29.395] [WINEVENT] EVENT_OBJECT_SHOW - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:29.410] [WINEVENT] UNKNOWN - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:29.422] [WINEVENT] UNKNOWN - HWND: 0x000000000001028e, Class: IME, Title: 'Default IME', PID: 12552
+[21:55:29.436] [WINEVENT] UNKNOWN - HWND: 0x00000000000706ba, Class: MSCTFIME UI, Title: 'MSCTFIME UI', PID: 12552
+[21:55:29.443] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:29.464] [Modifiers: [21:55:29.471] ALT [21:55:29.471] ][21:55:29.471] 
+[21:55:29.698] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:29.701] [Modifiers: [21:55:29.703] ALT [21:55:29.703] ][21:55:29.703] 
+[21:55:29.824] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:29.824] [Modifiers: [21:55:29.824] ALT [21:55:29.824] ][21:55:29.840] 
+[21:55:29.972] [KEYBOARD] Key DOWN: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:29.972] [Modifiers: [21:55:29.972] ALT [21:55:29.972] ][21:55:29.972] 
+[21:55:30.100] [KEYBOARD] Key UP: Tab (VK: 0x09, Scan: 0x000F) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:30.100] [Modifiers: [21:55:30.116] ALT [21:55:30.116] ][21:55:30.116] 
+[21:55:30.142] [KEYBOARD] Key UP: Left Alt (VK: 0xA4, Scan: 0x0038) [Window: 'Task Switching', Class: XamlExplorerHostIslandWindow, PID: 12552] [21:55:30.170] [Modifiers: [21:55:30.170] ALT [21:55:30.170] ][21:55:30.178] 
+[21:55:30.196] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: '' (Class: ForegroundStaging, PID: 12552)
+[21:55:30.208] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code' (Class: Chrome_WidgetWin_1, PID: 22460)
+[21:55:30.222] [WINEVENT] EVENT_OBJECT_HIDE - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:30.234] [WINEVENT] EVENT_SYSTEM_FOREGROUND - Window activated: 'Task Switching' (Class: XamlExplorerHostIslandWindow, PID: 12552)
+[21:55:30.247] [WINEVENT] UNKNOWN - HWND: 0x00000000000106c6, Class: XamlExplorerHostIslandWindow, Title: 'Task Switching', PID: 12552
+[21:55:30.259] [WINEVENT] UNKNOWN - HWND: 0x000000000001028e, Class: IME, Title: 'Default IME', PID: 12552
+[21:55:30.266] [WINEVENT] UNKNOWN - HWND: 0x00000000000706ba, Class: MSCTFIME UI, Title: 'MSCTFIME UI', PID: 12552
+[21:55:30.277] [WINEVENT] EVENT_OBJECT_HIDE - HWND: 0x00000000005c04d8, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:30.287] [WINEVENT] UNKNOWN - HWND: 0x00000000005c04d8, Class: Chrome_RenderWidgetHostHWND, Title: 'Chrome Legacy Window', PID: 19096
+[21:55:32.651] [WINEVENT] EVENT_SYSTEM_CAPTURESTART - HWND: 0x00000000000205da, Class: Chrome_WidgetWin_1, Title: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', PID: 22460
+[21:55:32.800] [WINEVENT] EVENT_SYSTEM_CAPTUREEND - HWND: 0x00000000000205da, Class: Chrome_WidgetWin_1, Title: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', PID: 22460
+[21:55:34.204] [KEYBOARD] Key DOWN: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:34.210] 
+[21:55:34.704] [KEYBOARD] Key DOWN: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:34.708] [Modifiers: [21:55:34.708] CTRL [21:55:34.708] ][21:55:34.708] 
+[21:55:34.728] [KEYBOARD] Key DOWN: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:34.733] [Modifiers: [21:55:34.739] CTRL [21:55:34.741] ][21:55:34.741] 
+[21:55:34.758] [KEYBOARD] Key DOWN: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:34.771] [Modifiers: [21:55:34.773] CTRL [21:55:34.774] ][21:55:34.775] 
+[21:55:34.790] [KEYBOARD] Key DOWN: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:34.804] [Modifiers: [21:55:34.806] CTRL [21:55:34.807] ][21:55:34.809] 
+[21:55:34.823] [KEYBOARD] Key DOWN: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:34.835] [Modifiers: [21:55:34.837] CTRL [21:55:34.839] ][21:55:34.839] 
+[21:55:34.855] [KEYBOARD] Key DOWN: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:34.868] [Modifiers: [21:55:34.870] CTRL [21:55:34.872] ][21:55:34.872] 
+[21:55:34.892] [KEYBOARD] Key DOWN: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:34.904] [Modifiers: [21:55:34.906] CTRL [21:55:34.907] ][21:55:34.908] 
+[21:55:34.934] [KEYBOARD] Key DOWN: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:34.947] [Modifiers: [21:55:34.949] CTRL [21:55:34.952] ][21:55:34.952] 
+[21:55:34.973] [KEYBOARD] Key DOWN: Left Shift (VK: 0xA0, Scan: 0x002A) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:34.986] [Modifiers: [21:55:34.988] CTRL [21:55:34.990] ][21:55:34.991] 
+[21:55:35.396] [KEYBOARD] Key UP: Left Shift (VK: 0xA0, Scan: 0x002A) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:35.409] [Modifiers: [21:55:35.411] SHIFT [21:55:35.412] CTRL [21:55:35.413] ][21:55:35.413] 
+[21:55:35.429] [KEYBOARD] Key UP: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:35.442] [Modifiers: [21:55:35.444] CTRL [21:55:35.446] ][21:55:35.447] 
+[21:55:35.583] [KEYBOARD] Key DOWN: Left Ctrl (VK: 0xA2, Scan: 0x001D) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:35.594] 
+[21:55:35.999] [KEYBOARD] Key DOWN: Left Alt (VK: 0xA4, Scan: 0x0038) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:36.011] [Modifiers: [21:55:36.011] CTRL [21:55:36.012] ][21:55:36.012] 
+[21:55:36.239] [KEYBOARD] Key DOWN: S (VK: 0x53, Scan: 0x001F) [Window: 'Window_Hooking.c - MalAPI-Arsenal - Visual Studio Code', Class: Chrome_WidgetWin_1, PID: 22460] [21:55:36.242] [Modifiers: [21:55:36.244] CTRL [21:55:36.244] ALT [21:55:36.244] ][21:55:36.244] 
+[21:55:36.244] [!] Ctrl+Alt+S detected - stopping monitoring
