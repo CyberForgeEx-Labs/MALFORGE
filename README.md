@@ -17,14 +17,14 @@
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Project Architecture](#project-architecture)
-- [Getting Started](#getting-started)
-- [Documentation](#documentation)
-- [Security Considerations](#security-considerations)
-- [Contributing](#contributing)
-- [Resources](#resources)
-- [Acknowledgments](#acknowledgments)
+- [Overview](https://github.com/CyberForgeEx/MALFORGE/blob/main/README.md#-overview)
+- [Project Architecture](https://github.com/CyberForgeEx/MALFORGE/blob/main/README.md#%EF%B8%8F-project-architecture)
+- [Getting Started](https://github.com/CyberForgeEx/MALFORGE/blob/main/README.md#-getting-started)
+- [Documentation](https://github.com/CyberForgeEx/MALFORGE/blob/main/README.md#-documentation)
+- [Security Considerations](https://github.com/CyberForgeEx/MALFORGE/blob/main/README.md#-security-considerations)
+- [Contributing](https://github.com/CyberForgeEx/MALFORGE/blob/main/README.md#-contributing)
+- [Resources](https://github.com/CyberForgeEx/MALFORGE/blob/main/README.md#-resources)
+- [Acknowledgments](https://github.com/CyberForgeEx/MALFORGE/blob/main/README.md#-acknowledgments)
 
 ---
 
