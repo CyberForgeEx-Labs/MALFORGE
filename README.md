@@ -1,6 +1,9 @@
 <div align="center">
 
-# 🛡️ MALFORGE
+<p align="center">
+    <img height="500" alt="MALFORGE" src="https://github.com/CyberForgeEx/MALFORGE/blob/main/logomf.png">
+</p>
+
 ### Windows API Arsenal for Security Research & Malware Analysis
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
