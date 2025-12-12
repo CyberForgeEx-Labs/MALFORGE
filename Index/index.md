@@ -13,7 +13,7 @@
 | **Page Fault**                  | When a program accesses memory that isn’t in RAM yet, Windows quickly loads it from disk               |
 | **Handles**                     | Secure references (like tickets) that let a process safely access files, registry keys, etc.           |
 | **Registry**                    | Windows’ central database where all configuration settings and options are stored                     |
-| **IRQL (Interrupt Request Level)** | Priority level that decides which code can interrupt what — higher IRQL blocks everything below it   |
+| **IRQL (Interrupt Request Level)** | Priority level that decides which code can interrupt what  higher IRQL blocks everything below it   |
 | **Driver**                      | Small program that lets Windows communicate with hardware (GPU, USB, network card, etc.)              |
 | **Object Manager**              | The kernel component that creates, tracks, and secures all system objects (files, threads, etc.)      |
 | **EPROCESS & ETHREAD**          | Kernel structures that hold all info about a process (EPROCESS) and each of its threads (ETHREAD)    |
@@ -29,8 +29,163 @@
 | **DPC (Deferred Procedure Call)** | Short kernel routine that runs at lower priority after a hardware interrupt finishes               |
 | **Interrupt**                   | Hardware signal that instantly forces the CPU to stop and run a specific handler                       |
 | **Trap / Exception**            | Unexpected event (divide-by-zero, access violation, etc.) that transfers control to a handler        |
-| **Section Object**              | Kernel object that represents a memory-mapped file — lets multiple processes share the same memory  |
+| **Section Object**              | Kernel object that represents a memory-mapped file lets multiple processes share the same memory  |
+
+---
+
+### Anti-Debugging
+
+| Technical Term                     | One-Liner Explanation                                                                                          |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **OutputDebugStringA**             | Sends a message meant for a debugger if nothing receives it, the program can detect no debugger is attached. |
+| **SleepEx**                        | Makes the program “sleep,” and debuggers slow this down, so timing differences help detect debugging.          |
+| **IsDebuggerPresent**              | Directly checks if the current process is being debugged.                                                      |
+| **CheckRemoteDebuggerPresent**     | Checks if another debugger is attached to the process.                                                         |
+| **NtQueryInformationProcess**      | Low-level Windows call used to ask the OS if a debugger is present.                                            |
+| **GetLogicalProcessorInformation** | Reads CPU info debuggers/VMs often report unusual values that give away analysis environments.               |
+| **CreateToolhelp32Snapshot**       | Can list processes and look for known debuggers running.                                                       |
+| **FindWindowA**                    | Searches for debugger windows (like OllyDbg or x64dbg) by their window names.                                  |
+| **ExitWindowsEx**                  | Malicious programs abuse this to shut down or log off the system if a debugger is detected.                    |
+| **CountClipboardFormats**          | Checks clipboard format count debuggers can affect this value, revealing their presence.                     |
+| **GetTickCount64**                 | Measures time passed; if stepping slows execution, it signals debugging.                                       |
+| **QueryPerformanceCounter**        | High-precision timer used to catch execution slowdowns caused by breakpoints.                                  |
 
 
-more....
+---
 
+### Enumeration
+
+---
+
+#### File System Enumeration
+
+| Technical Term           | One-Liner Explanation                                                   |
+| ------------------------ | ----------------------------------------------------------------------- |
+| **FindFirstFileA**       | Starts searching a directory for files/folders matching a pattern.      |
+| **FindNextFileA**        | Continues the directory search started with FindFirstFileA.             |
+| **GetWindowsDirectoryA** | Returns the path to the Windows installation folder.                    |
+| **GetSystemDirectoryA**  | Returns the path to the main system folder (System32).                  |
+| **PathFileExistsA**      | Checks if a file or folder actually exists.                             |
+| **GetLogicalDrives**     | Lists all drive letters currently available (C:, D:, etc.).             |
+| **GetDriveTypeA**        | Tells what type of drive a path belongs to (HDD, USB, CD-ROM, network). |
+
+#### Local Time Enumeration
+
+| Technical Term              | One-Liner Explanation                                            |
+| --------------------------- | ---------------------------------------------------------------- |
+| **GetSystemTime**           | Gets the current UTC date and time.                              |
+| **GetSystemTimeAsFileTime** | Gets the current time in Windows FILETIME 64-bit format.         |
+| **GetThreadLocale**         | Returns the language/region settings used by the current thread. |
+
+#### Memory / File Query
+
+| Technical Term         | One-Liner Explanation                                        |
+| ---------------------- | ------------------------------------------------------------ |
+| **ReadProcessMemory**  | Reads memory from another process.                           |
+| **ReadFile**           | Reads data from a file on disk.                              |
+| **VirtualQueryEx**     | Retrieves memory region info from another process.           |
+| **GetFileAttributesA** | Gets file or directory properties (hidden, read-only, etc.). |
+| **SearchPathA**        | Searches system paths to find the full path of a file.       |
+
+#### Module / Driver Enumeration
+
+| Technical Term                   | One-Liner Explanation                                |
+| -------------------------------- | ---------------------------------------------------- |
+| **EnumDeviceDrivers**            | Lists all loaded kernel drivers.                     |
+| **EnumProcessModulesEx**         | Lists modules (DLLs) loaded by a process.            |
+| **Module32First / Module32Next** | Walks through a process’s loaded modules one by one. |
+| **GetModuleBaseNameA**           | Gets a module’s filename (e.g., “kernel32.dll”).     |
+| **GetModuleInformation**         | Retrieves memory and size details about a module.    |
+| **GetDeviceDriverBaseNameA**     | Gets the name of a loaded device driver.             |
+
+#### Network Enumeration
+
+| Technical Term          | One-Liner Explanation                                   |
+| ----------------------- | ------------------------------------------------------- |
+| **NetShareEnum**        | Lists shared folders on a target system.                |
+| **NetShareGetInfo**     | Retrieves detailed info about a specific network share. |
+| **NetShareCheck**       | Checks if a path is a valid network share.              |
+| **WNetEnumResource**    | Enumerates network resources (shares, servers, etc.).   |
+| **WNetAddConnection2A** | Connects to a network share using credentials.          |
+| **GetAdaptersInfo**     | Lists local network adapters and their settings.        |
+| **GetIpNetTable**       | Gets the system’s ARP table (IP ↔ MAC mapping).         |
+
+#### Process Enumeration
+
+| Technical Term           | One-Liner Explanation                                       |
+| ------------------------ | ----------------------------------------------------------- |
+| **EnumProcesses**        | Lists all running process IDs.                              |
+| **OpenProcess**          | Opens a handle to another process for inspection.           |
+| **GetModuleFileNameEx**  | Gets the full path of a module in a target process.         |
+| **GetProcessMemoryInfo** | Retrieves memory usage stats for a process.                 |
+| **GetProcessTimes**      | Provides CPU and runtime timing info for a process.         |
+| **GetPriorityClass**     | Retrieves the scheduling priority of a process.             |
+| **EnumProcessModules**   | Lists modules loaded in a process.                          |
+| **GetExitCodeProcess**   | Checks whether a process is still running or its exit code. |
+
+#### Registry Enumeration
+
+| Technical Term              | One-Liner Explanation                                         |
+| --------------------------- | ------------------------------------------------------------- |
+| **RegEnumKeyExA**           | Lists subkeys within a registry key.                          |
+| **RegEnumValueA**           | Lists values stored in a registry key.                        |
+| **RegEnumKeyA**             | Another API for enumerating subkeys in a registry key.        |
+| **RegQueryInfoKeyA**        | Retrieves metadata about a registry key (counts, timestamps). |
+| **RegQueryMultipleValuesA** | Reads multiple registry values in one call.                   |
+| **RegQueryValueExA**        | Gets the data of a specific registry entry.                   |
+| **GetCurrentHwProfileA**    | Returns hardware profile info like machine GUID/name.         |
+
+#### Resource Enumeration
+
+| Technical Term              | One-Liner Explanation                                      |
+| --------------------------- | ---------------------------------------------------------- |
+| **EnumResourceTypesA**      | Lists resource types stored inside an executable.          |
+| **EnumResourceTypesExA**    | Advanced version that lists resource types with filtering. |
+| **FindFirstUrlCacheEntryA** | Starts enumerating browser cache entries.                  |
+| **FindNextUrlCacheEntryA**  | Continues browser cache enumeration.                       |
+
+#### System Info Enumeration
+
+| Technical Term             | One-Liner Explanation                                                        |
+| -------------------------- | ---------------------------------------------------------------------------- |
+| **GetNativeSystemInfo**    | Provides CPU architecture and general system info.                           |
+| **GetSystemDefaultLangID** | Returns the system’s default language setting.                               |
+| **GetVersionExA**          | Retrieves Windows version info (deprecated but used).                        |
+| **RtlGetVersion**          | Internal API to get accurate Windows version info.                           |
+| **IsWoW64Process**         | Checks if a process is running under 32-bit compatibility on 64-bit Windows. |
+| **GetDriveTypeA**          | Identifies the type of a drive (HDD/USB/CD/network).                         |
+
+#### Thread Enumeration
+
+| Technical Term                   | One-Liner Explanation                                    |
+| -------------------------------- | -------------------------------------------------------- |
+| **Thread32First / Thread32Next** | Walks through all threads in the system or a process.    |
+| **GetProcessIdOfThread**         | Gets the process ID of a given thread.                   |
+| **GetCurrentThread**             | Returns a pseudo-handle for the calling thread.          |
+| **GetCurrentThreadId**           | Gets the thread ID of the current thread.                |
+| **GetThreadId**                  | Retrieves the ID of any thread via its handle.           |
+| **GetThreadInformation**         | Gets detailed info about a thread (state, timing, etc.). |
+
+#### User / Account Enumeration
+
+| Technical Term            | One-Liner Explanation                                 |
+| ------------------------- | ----------------------------------------------------- |
+| **GetUserNameA**          | Retrieves the currently logged-in username.           |
+| **GetComputerNameA**      | Gets the system’s computer name.                      |
+| **LookupAccountNameA**    | Converts a username to its SID (security identifier). |
+| **LookupPrivilegeValueA** | Gets the numeric value of a Windows privilege.        |
+
+#### Window / Desktop Enumeration
+
+| Technical Term               | One-Liner Explanation                                 |
+| ---------------------------- | ----------------------------------------------------- |
+| **EnumWindows**              | Enumerates all top-level windows on the screen.       |
+| **EnumDesktopWindows**       | Lists windows belonging to a specific desktop.        |
+| **GetWindowText**            | Retrieves the title text of a window.                 |
+| **GetClassName**             | Gets the class name of a window (type of UI element). |
+| **GetWindowThreadProcessId** | Retrieves which thread and process own a window.      |
+| **IsWindowVisible**          | Checks if a window is visible on the screen.          |
+| **IsWindowEnabled**          | Checks if a window accepts user input.                |
+| **GetWindowRect**            | Gets the position and size of a window.               |
+
+---
