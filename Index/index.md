@@ -315,3 +315,69 @@
 | **LookupPrivilegeName**   | Converts a privilege LUID back into its human-readable name.       |
 
 ---
+
+### Evasion
+
+#### Data Protection
+
+| Technical Term                 | One-Liner Explanation                                                            |
+| ------------------------------ | -------------------------------------------------------------------------------- |
+| **CryptProtectData**           | Encrypts data using Windows DPAPI tied to the current user or system.            |
+| **CryptUnprotectData**         | Decrypts data previously protected with DPAPI.                                   |
+| **UuidFromStringA**            | Converts a UUID string into binary data, often used for encoded payload storage. |
+| **UuidCreate + UuidToStringA** | Generates UUIDs and converts them to strings to disguise or serialize data.      |
+
+#### Dynamic Code Loading
+
+| Technical Term      | One-Liner Explanation                                           |
+| ------------------- | --------------------------------------------------------------- |
+| **GetModuleHandle** | Retrieves a handle to a loaded module without loading it again. |
+| **FindResource**    | Locates an embedded resource inside a module.                   |
+| **LoadResource**    | Loads a resource into memory for access.                        |
+| **SizeofResource**  | Returns the size of an embedded resource.                       |
+| **LockResource**    | Provides a pointer to the loaded resource data in memory.       |
+
+#### Environment Manipulation
+
+| Technical Term              | One-Liner Explanation                                                   |
+| --------------------------- | ----------------------------------------------------------------------- |
+| **GetEnvironmentVariableA** | Reads environment variable values from the process.                     |
+| **SetEnvironmentVariableA** | Modifies or creates environment variables at runtime.                   |
+| **EnumSystemLocalesA**      | Enumerates available system locales, often used for environment checks. |
+| **GetLocaleInfoA**          | Retrieves locale-specific configuration information.                    |
+| **GetSystemDefaultLCID**    | Returns the system’s default locale identifier.                         |
+
+#### Anti-Forensic File Manipulation
+
+| Technical Term                              | One-Liner Explanation                                     |
+| ------------------------------------------- | --------------------------------------------------------- |
+| **CreateFile**                              | Creates or opens a file or device handle.                 |
+| **WriteFile**                               | Writes raw data directly to a file.                       |
+| **GetFileTime / SetFileTime**               | Reads or modifies file timestamps to hide activity.       |
+| **GetFileAttributesA / SetFileAttributesA** | Reads or changes file attributes like hidden or system.   |
+| **CreateFileMappingA**                      | Maps a file into memory for stealthy access.              |
+| **MapViewOfFile**                           | Maps a file-mapped object into the process address space. |
+| **DeleteFileA**                             | Removes a file from disk to erase artifacts.              |
+
+#### Time-Based Evasion
+
+| Technical Term            | One-Liner Explanation                                                    |
+| ------------------------- | ------------------------------------------------------------------------ |
+| **NtDelayExecution**      | Suspends execution for a specified time at the native API level.         |
+| **SetWaitableTimer**      | Triggers execution after a delayed or scheduled time.                    |
+| **CreateTimerQueueTimer** | Creates a timer that executes a callback after a delay.                  |
+| **SetTimer**              | Generates timer-based messages for delayed execution.                    |
+| **select()**              | Uses network timeout waits as an indirect sleep mechanism.               |
+| **IcmpSendEcho**          | Sends ICMP requests and waits for replies to introduce execution delays. |
+| **timeGetTime**           | Retrieves system uptime in milliseconds to detect timing anomalies.      |
+
+#### UI-Based Evasion
+
+| Technical Term                   | One-Liner Explanation                                                    |
+| -------------------------------- | ------------------------------------------------------------------------ |
+| **CreateWindowExA**              | Creates a window to blend execution into normal GUI behavior.            |
+| **RegisterHotKey**               | Registers a hotkey to trigger actions only on user interaction.          |
+| **GetMessage / DispatchMessage** | Uses a message loop to idle execution until user or system events occur. |
+
+---
+
