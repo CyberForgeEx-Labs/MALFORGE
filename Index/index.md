@@ -381,3 +381,58 @@
 
 ---
 
+### Ransomware Cryptographic Techniques
+
+#### Cryptographic Context Management
+
+| Technical Term                                               | One-Liner Explanation                                                        |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| **CryptAcquireContext**                                      | Acquires a handle to a cryptographic service provider for crypto operations. |
+| **CryptCreateHash**                                          | Initializes a hash object for hashing data.                                  |
+| **CryptHashData**                                            | Feeds data into a hash object for processing.                                |
+| **CryptDeriveKey**                                           | Derives a symmetric encryption key from hashed data.                         |
+| **CryptEncrypt**                                             | Encrypts data using a cryptographic key.                                     |
+| **CryptDecrypt**                                             | Decrypts previously encrypted data.                                          |
+| **CryptDestroyKey / CryptDestroyHash / CryptReleaseContext** | Cleans up keys, hashes, and crypto provider handles.                         |
+
+#### Encoding / Decoding
+
+| Technical Term          | One-Liner Explanation                                                |
+| ----------------------- | -------------------------------------------------------------------- |
+| **CryptBinaryToString** | Converts binary data into encoded string formats like Base64 or Hex. |
+| **CryptStringToBinary** | Decodes encoded strings back into raw binary data.                   |
+
+
+#### File Encryption
+
+| Technical Term            | One-Liner Explanation                                           |
+| ------------------------- | --------------------------------------------------------------- |
+| **FileEncryptionStatusA** | Checks whether a file is encrypted using Windows EFS.           |
+| **EncryptFileA**          | Encrypts a file using the Windows Encrypting File System (EFS). |
+| **DecryptFileA**          | Decrypts an EFS-encrypted file back to plaintext.               |
+
+
+#### Hashing Operations
+
+| Technical Term          | One-Liner Explanation                                 |
+| ----------------------- | ----------------------------------------------------- |
+| **CryptCreateHash**     | Creates a hash object for generating data digests.    |
+| **CryptHashData**       | Hashes input data incrementally.                      |
+| **CryptGetHashParam**   | Retrieves hash values or metadata from a hash object. |
+| **CryptDestroyHash**    | Frees a hash object after use.                        |
+| **CryptReleaseContext** | Releases the cryptographic provider context.          |
+
+
+#### Key Derivation
+
+| Technical Term        | One-Liner Explanation                                                  |
+| --------------------- | ---------------------------------------------------------------------- |
+| **CryptGenRandom**    | Generates cryptographically secure random bytes.                       |
+| **CryptDeriveKey**    | Derives an encryption key from a hash or password.                     |
+| **CryptSetKeyParam**  | Configures parameters such as mode or padding for a cryptographic key. |
+| **CryptEncrypt**      | Encrypts data using a derived or generated key.                        |
+| **CryptGenKey**       | Generates a new cryptographic key directly from the provider.          |
+| **CryptGetHashParam** | Retrieves hash output used during key generation or verification.      |
+
+---
+
