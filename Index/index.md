@@ -189,3 +189,129 @@
 | **GetWindowRect**            | Gets the position and size of a window.               |
 
 ---
+
+### Injection
+
+#### APC Injection
+
+| Technical Term          | One-Liner Explanation                                                          |
+| ----------------------- | ------------------------------------------------------------------------------ |
+| **QueueUserAPC**        | Queues a function to run in a target thread when it enters an alertable state. |
+| **NtQueueApcThread**    | Native API that inserts an APC directly into a specific thread.                |
+| **NtQueueApcThreadEx2** | Extended APC queuing call that offers more control over APC delivery.          |
+| **OpenThread**          | Opens a handle to an existing thread so it can be inspected or manipulated.    |
+
+
+#### Classic DLL Injection
+
+| Technical Term           | One-Liner Explanation                                           |
+| ------------------------ | --------------------------------------------------------------- |
+| **CreateRemoteThreadEx** | Creates a thread inside another process to execute code.        |
+| **LoadLibraryExA**       | Loads a DLL into a process and resolves its dependencies.       |
+| **GetModuleHandleA**     | Retrieves a handle to a loaded module without loading it again. |
+| **GetProcAddress**       | Gets the address of an exported function from a loaded DLL.     |
+| **WriteProcessMemory**   | Writes data into the memory of another process.                 |
+| **VirtualAllocEx**       | Allocates memory inside a remote process.                       |
+| **OpenProcess**          | Opens a handle to another process with specified access rights. |
+| **OpenThread**           | Opens a handle to a thread for further operations.              |
+| **NtCreateThreadEx**     | Low-level API to create a thread in another process.            |
+| **LdrLoadDll**           | Internal loader routine that loads a DLL into a process.        |
+
+#### Heap Manipulation
+
+| Technical Term      | One-Liner Explanation                                 |
+| ------------------- | ----------------------------------------------------- |
+| **HeapCreate**      | Creates a private heap for dynamic memory allocation. |
+| **HeapAlloc**       | Allocates a block of memory from a heap.              |
+| **HeapReAlloc**     | Resizes an existing heap memory block.                |
+| **GetProcessHeap**  | Returns a handle to the default process heap.         |
+| **GetProcessHeaps** | Lists all heaps currently allocated by a process.     |
+| **RtlCreateHeap**   | Native API used to create a heap structure directly.  |
+| **GlobalAlloc**     | Legacy function that allocates global memory blocks.  |
+
+
+#### Memory Copy Operations
+
+| Technical Term         | One-Liner Explanation                                  |
+| ---------------------- | ------------------------------------------------------ |
+| **RtlMoveMemory**      | Copies memory safely between overlapping regions.      |
+| **RtlCopyMemory**      | Copies a block of memory from one location to another. |
+| **WriteProcessMemory** | Copies data into another process’s memory space.       |
+| **ReadProcessMemory**  | Reads memory from another process’s address space.     |
+
+
+#### Memory Manipulation
+
+| Technical Term              | One-Liner Explanation                                         |
+| --------------------------- | ------------------------------------------------------------- |
+| **VirtualAllocEx**          | Allocates virtual memory in a remote process.                 |
+| **VirtualProtectEx**        | Changes memory protection flags in another process.           |
+| **VirtualAllocExNuma**      | Allocates memory on a specific NUMA node.                     |
+| **NtAllocateVirtualMemory** | Native API to reserve or commit virtual memory.               |
+| **NtProtectVirtualMemory**  | Native call to modify memory protection attributes.           |
+| **NtReadVirtualMemoryEx**   | Reads memory from a process using extended native parameters. |
+| **NtWriteVirtualMemory**    | Writes data into a process’s virtual memory via native API.   |
+
+#### Object Duplication
+
+| Technical Term        | One-Liner Explanation                              |
+| --------------------- | -------------------------------------------------- |
+| **NtDuplicateObject** | Duplicates a handle from one process into another. |
+
+### Process Management
+
+| Technical Term           | One-Liner Explanation                                        |
+| ------------------------ | ------------------------------------------------------------ |
+| **CreateProcessA**       | Creates a new process and its primary thread.                |
+| **GetThreadContext**     | Retrieves the CPU register state of a suspended thread.      |
+| **SetThreadContext**     | Modifies the CPU register state of a suspended thread.       |
+| **SuspendThread**        | Pauses execution of a specified thread.                      |
+| **ResumeThread**         | Resumes execution of a previously suspended thread.          |
+| **NtUnmapViewOfSection** | Unmaps a section (memory view) from a process address space. |
+| **NtResumeThread**       | Native API to resume a suspended thread.                     |
+| **NtSuspendProcess**     | Suspends all threads within a target process.                |
+
+### Section Mapping
+
+| Technical Term         | One-Liner Explanation                                         |
+| ---------------------- | ------------------------------------------------------------- |
+| **CreateFileMappingA** | Creates a memory-backed or file-backed shared memory section. |
+| **MapViewOfFileEx**    | Maps a section into a process at a specified address.         |
+| **OpenFileMappingA**   | Opens an existing named file mapping object.                  |
+| **NtCreateSection**    | Native API to create a section object for shared memory.      |
+| **NtMapViewOfSection** | Maps a section into a process using low-level NT APIs.        |
+
+### Specialized Techniques
+
+| Technical Term                  | One-Liner Explanation                                              |
+| ------------------------------- | ------------------------------------------------------------------ |
+| **SetPropA**                    | Attaches custom data to a window object.                           |
+| **SetProcessDEPPolicy**         | Configures Data Execution Prevention (DEP) behavior for a process. |
+| **EnumSystemLocalesA**          | Enumerates system locale identifiers installed on the OS.          |
+| **UuidFromStringA**             | Converts a UUID string into its binary representation.             |
+| **DebugActiveProcessStop**      | Detaches a debugger from a target process.                         |
+| **LocalAlloc**                  | Allocates memory from the local heap.                              |
+| **Toolhelp32ReadProcessMemory** | Reads another process’s memory using Toolhelp snapshot APIs.       |
+
+
+### Synchronization
+
+| Technical Term               | One-Liner Explanation                                           |
+| ---------------------------- | --------------------------------------------------------------- |
+| **WaitForSingleObjectEx**    | Waits for a single object with optional alertable behavior.     |
+| **WaitForMultipleObjectsEx** | Waits for one or more objects with alertable execution support. |
+| **NtWaitForMultipleObjects** | Native API to wait on multiple kernel objects.                  |
+| **NtWaitForSingleObject**    | Native API to wait for a single kernel object.                  |
+
+### Token Security Manipulation
+
+| Technical Term            | One-Liner Explanation                                              |
+| ------------------------- | ------------------------------------------------------------------ |
+| **OpenProcessToken**      | Opens the access token associated with a process.                  |
+| **AdjustTokenPrivileges** | Enables or disables privileges within an access token.             |
+| **DuplicateToken**        | Creates a duplicate access token from an existing one.             |
+| **GetTokenInformation**   | Retrieves security details stored in an access token.              |
+| **LookupPrivilegeValue**  | Resolves a privilege name to its locally unique identifier (LUID). |
+| **LookupPrivilegeName**   | Converts a privilege LUID back into its human-readable name.       |
+
+---
