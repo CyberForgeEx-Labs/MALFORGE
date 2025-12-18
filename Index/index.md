@@ -436,3 +436,94 @@
 
 ---
 
+### Spying & Surveillance Techniques
+
+#### Clipboard Surveillance
+
+| Technical Term                        | One-Liner Explanation                                                       |
+| ------------------------------------- | --------------------------------------------------------------------------- |
+| **AddClipboardFormatListener**        | Registers a window to receive notifications when clipboard content changes. |
+| **RemoveClipboardFormatListener**     | Unregisters clipboard change notifications for a window.                    |
+| **OpenClipboard / CloseClipboard**    | Gains and releases access to the system clipboard.                          |
+| **GetClipboardData (CF_TEXT)**        | Reads ANSI text data currently stored in the clipboard.                     |
+| **GetClipboardData (CF_UNICODETEXT)** | Reads Unicode text data from the clipboard.                                 |
+| **EnumClipboardFormats**              | Enumerates all data formats currently present in the clipboard.             |
+| **GetClipboardFormatName**            | Retrieves the human-readable name of a clipboard format.                    |
+| **CreateWindowEx + Message Loop**     | Creates a window to receive clipboard-related system messages.              |
+
+#### Raw Input API & Hotkey Registration
+
+| Technical Term              | One-Liner Explanation                                              |
+| --------------------------- | ------------------------------------------------------------------ |
+| **RegisterRawInputDevices** | Registers devices to receive raw keyboard or mouse input.          |
+| **GetRawInputData**         | Extracts low-level input data directly from input devices.         |
+| **RegisterHotKey**          | Registers a global key combination to trigger actions system-wide. |
+| **UnregisterHotKey**        | Removes a previously registered global hotkey.                     |
+| **RegisterClassEx**         | Registers a window class required to receive raw input messages.   |
+
+#### Keylogging Techniques
+
+| Technical Term        | One-Liner Explanation                                             |
+| --------------------- | ----------------------------------------------------------------- |
+| **GetAsyncKeyState**  | Checks the real-time state of a specific key asynchronously.      |
+| **GetKeyboardState**  | Retrieves the state of all virtual keys at once.                  |
+| **GetKeyState**       | Retrieves the toggle or press state of a specific key.            |
+| **GetKeyNameTextA**   | Converts a virtual key scan code into a readable key name.        |
+| **MapVirtualKeyA**    | Translates virtual-key codes into scan codes or character values. |
+| **MapVirtualKeyExA**  | Performs key translation using a specific keyboard layout.        |
+| **GetKeyboardLayout** | Retrieves the active keyboard layout for the current thread.      |
+
+#### Message Interception
+
+| Technical Term           | One-Liner Explanation                                       |
+| ------------------------ | ----------------------------------------------------------- |
+| **GetMessageA**          | Retrieves messages from a thread’s message queue.           |
+| **PeekMessageA**         | Checks for messages without blocking execution.             |
+| **PostMessageA**         | Posts a message to a window’s message queue asynchronously. |
+| **PostThreadMessageA**   | Posts a message directly to another thread’s message queue. |
+| **SendMessageA**         | Sends a message and waits for it to be processed.           |
+| **SendMessageCallbackA** | Sends a message with a callback once processing completes.  |
+| **SendMessageTimeoutA**  | Sends a message with a timeout to avoid blocking.           |
+| **SendNotifyMessageA**   | Sends a message without waiting for a response.             |
+| **DispatchMessageA**     | Dispatches a message to a window procedure.                 |
+| **TranslateMessage**     | Translates keyboard messages into character messages.       |
+
+#### Visual Surveillance
+
+| Technical Term             | One-Liner Explanation                                            |
+| -------------------------- | ---------------------------------------------------------------- |
+| **GetDC**                  | Retrieves a device context for drawing or screen capture.        |
+| **CreateCompatibleDC**     | Creates a memory device context compatible with an existing one. |
+| **CreateCompatibleBitmap** | Creates a bitmap compatible with a device context.               |
+| **BitBlt**                 | Copies pixel data from one device context to another.            |
+| **StretchBlt**             | Copies and resizes pixel data between device contexts.           |
+| **PrintWindow**            | Captures the visual content of a specific window.                |
+| **GetWindowRect**          | Retrieves the screen coordinates of a window.                    |
+| **SelectObject**           | Selects a bitmap or object into a device context.                |
+| **GetSystemMetrics**       | Retrieves screen size and display-related metrics.               |
+
+#### Window Focus Tracking
+
+| Technical Term               | One-Liner Explanation                                          |
+| ---------------------------- | -------------------------------------------------------------- |
+| **GetForegroundWindow**      | Retrieves the handle of the currently active window.           |
+| **GetWindowThreadProcessId** | Gets the thread and process ID associated with a window.       |
+| **AttachThreadInput**        | Links input processing between threads to track focus changes. |
+| **GetWindowText**            | Retrieves the title text of a window.                          |
+| **GetModuleBaseName**        | Retrieves the executable name associated with a process.       |
+| **GetCurrentThreadId**       | Returns the identifier of the calling thread.                  |
+| **IsWindowVisible**          | Checks whether a window is visible on screen.                  |
+
+#### Window Event Monitoring
+
+| Technical Term                        | One-Liner Explanation                                              |
+| ------------------------------------- | ------------------------------------------------------------------ |
+| **SetWindowsHookEx (WH_KEYBOARD_LL)** | Installs a low-level keyboard hook to capture keystrokes globally. |
+| **SetWindowsHookEx (WH_GETMESSAGE)**  | Hooks message retrieval to monitor or alter window messages.       |
+| **SetWinEventHook**                   | Registers callbacks for system-wide window and UI events.          |
+
+---
+
+<p align="right">
+  Last Updated - December 2025
+</p>
