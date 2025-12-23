@@ -9,11 +9,11 @@
 | **Kernel**                      | The core part of Windows that directly controls the hardware and all critical resources                 |
 | **User Mode vs Kernel Mode**    | User mode = apps run safely with limited powers; Kernel mode = full control over the entire system     |
 | **Processes & Threads**         | Process = a running program with its own memory; Thread = the actual worker that executes code         |
-| **Virtual Memory**              | Each process gets its own private “pretend” memory space so programs don’t interfere with each other   |
-| **Page Fault**                  | When a program accesses memory that isn’t in RAM yet, Windows quickly loads it from disk               |
+| **Virtual Memory**              | Each process gets its own private "pretend" memory space so programs don't interfere with each other   |
+| **Page Fault**                  | When a program accesses memory that isn't in RAM yet, Windows quickly loads it from disk               |
 | **Handles**                     | Secure references (like tickets) that let a process safely access files, registry keys, etc.           |
-| **Registry**                    | Windows’ central database where all configuration settings and options are stored                     |
-| **IRQL (Interrupt Request Level)** | Priority level that decides which code can interrupt what  higher IRQL blocks everything below it   |
+| **Registry**                    | Windows' central database where all configuration settings and options are stored                     |
+| **IRQL (Interrupt Request Level)** | Priority level that decides which code can interrupt what - higher IRQL blocks everything below it   |
 | **Driver**                      | Small program that lets Windows communicate with hardware (GPU, USB, network card, etc.)              |
 | **Object Manager**              | The kernel component that creates, tracks, and secures all system objects (files, threads, etc.)      |
 | **EPROCESS & ETHREAD**          | Kernel structures that hold all info about a process (EPROCESS) and each of its threads (ETHREAD)    |
@@ -23,13 +23,13 @@
 | **NTDLL**                       | Core user-mode DLL that translates Win32 API calls into native system calls (Nt/Zw functions)        |
 | **Sysinternals Tools**         | Free Microsoft tools (ProcExp, ProcMon, etc.) that let you see exactly what Windows is doing          |
 | **WinDbg / x64dbg**             | Powerful debuggers to pause, inspect, and step through code at the kernel or user level              |
-| **Pool Memory**                 | Kernel’s own fast heap (paged or non-paged) used for drivers and system structures                    |
+| **Pool Memory**                 | Kernel's own fast heap (paged or non-paged) used for drivers and system structures                    |
 | **Executive vs Kernel**         | Executive = high-level kernel services (I/O, memory, objects); Kernel = low-level CPU/scheduler code |
 | **APC (Asynchronous Procedure Call)** | Way to inject a function call into a thread and run it the next time the thread is alertable     |
 | **DPC (Deferred Procedure Call)** | Short kernel routine that runs at lower priority after a hardware interrupt finishes               |
 | **Interrupt**                   | Hardware signal that instantly forces the CPU to stop and run a specific handler                       |
 | **Trap / Exception**            | Unexpected event (divide-by-zero, access violation, etc.) that transfers control to a handler        |
-| **Section Object**              | Kernel object that represents a memory-mapped file lets multiple processes share the same memory  |
+| **Section Object**              | Kernel object that represents a memory-mapped file - lets multiple processes share the same memory  |
 
 ---
 
@@ -37,16 +37,16 @@
 
 | Technical Term                     | One-Liner Explanation                                                                                          |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| **OutputDebugStringA**             | Sends a message meant for a debugger if nothing receives it, the program can detect no debugger is attached. |
-| **SleepEx**                        | Makes the program “sleep,” and debuggers slow this down, so timing differences help detect debugging.          |
+| **OutputDebugStringA**             | Sends a message meant for a debugger - if nothing receives it, the program can detect no debugger is attached. |
+| **SleepEx**                        | Makes the program "sleep," and debuggers slow this down, so timing differences help detect debugging.          |
 | **IsDebuggerPresent**              | Directly checks if the current process is being debugged.                                                      |
 | **CheckRemoteDebuggerPresent**     | Checks if another debugger is attached to the process.                                                         |
 | **NtQueryInformationProcess**      | Low-level Windows call used to ask the OS if a debugger is present.                                            |
-| **GetLogicalProcessorInformation** | Reads CPU info debuggers/VMs often report unusual values that give away analysis environments.               |
+| **GetLogicalProcessorInformation** | Reads CPU info - debuggers/VMs often report unusual values that give away analysis environments.               |
 | **CreateToolhelp32Snapshot**       | Can list processes and look for known debuggers running.                                                       |
 | **FindWindowA**                    | Searches for debugger windows (like OllyDbg or x64dbg) by their window names.                                  |
 | **ExitWindowsEx**                  | Malicious programs abuse this to shut down or log off the system if a debugger is detected.                    |
-| **CountClipboardFormats**          | Checks clipboard format count debuggers can affect this value, revealing their presence.                     |
+| **CountClipboardFormats**          | Checks clipboard format count - debuggers can affect this value, revealing their presence.                     |
 | **GetTickCount64**                 | Measures time passed; if stepping slows execution, it signals debugging.                                       |
 | **QueryPerformanceCounter**        | High-precision timer used to catch execution slowdowns caused by breakpoints.                                  |
 
@@ -93,8 +93,8 @@
 | -------------------------------- | ---------------------------------------------------- |
 | **EnumDeviceDrivers**            | Lists all loaded kernel drivers.                     |
 | **EnumProcessModulesEx**         | Lists modules (DLLs) loaded by a process.            |
-| **Module32First / Module32Next** | Walks through a process’s loaded modules one by one. |
-| **GetModuleBaseNameA**           | Gets a module’s filename (e.g., “kernel32.dll”).     |
+| **Module32First / Module32Next** | Walks through a process's loaded modules one by one. |
+| **GetModuleBaseNameA**           | Gets a module's filename (e.g., "kernel32.dll").     |
 | **GetModuleInformation**         | Retrieves memory and size details about a module.    |
 | **GetDeviceDriverBaseNameA**     | Gets the name of a loaded device driver.             |
 
@@ -108,7 +108,7 @@
 | **WNetEnumResource**    | Enumerates network resources (shares, servers, etc.).   |
 | **WNetAddConnection2A** | Connects to a network share using credentials.          |
 | **GetAdaptersInfo**     | Lists local network adapters and their settings.        |
-| **GetIpNetTable**       | Gets the system’s ARP table (IP ↔ MAC mapping).         |
+| **GetIpNetTable**       | Gets the system's ARP table (IP ↔ MAC mapping).         |
 
 #### Process Enumeration
 
@@ -149,7 +149,7 @@
 | Technical Term             | One-Liner Explanation                                                        |
 | -------------------------- | ---------------------------------------------------------------------------- |
 | **GetNativeSystemInfo**    | Provides CPU architecture and general system info.                           |
-| **GetSystemDefaultLangID** | Returns the system’s default language setting.                               |
+| **GetSystemDefaultLangID** | Returns the system's default language setting.                               |
 | **GetVersionExA**          | Retrieves Windows version info (deprecated but used).                        |
 | **RtlGetVersion**          | Internal API to get accurate Windows version info.                           |
 | **IsWoW64Process**         | Checks if a process is running under 32-bit compatibility on 64-bit Windows. |
@@ -171,7 +171,7 @@
 | Technical Term            | One-Liner Explanation                                 |
 | ------------------------- | ----------------------------------------------------- |
 | **GetUserNameA**          | Retrieves the currently logged-in username.           |
-| **GetComputerNameA**      | Gets the system’s computer name.                      |
+| **GetComputerNameA**      | Gets the system's computer name.                      |
 | **LookupAccountNameA**    | Converts a username to its SID (security identifier). |
 | **LookupPrivilegeValueA** | Gets the numeric value of a Windows privilege.        |
 
@@ -236,8 +236,8 @@
 | ---------------------- | ------------------------------------------------------ |
 | **RtlMoveMemory**      | Copies memory safely between overlapping regions.      |
 | **RtlCopyMemory**      | Copies a block of memory from one location to another. |
-| **WriteProcessMemory** | Copies data into another process’s memory space.       |
-| **ReadProcessMemory**  | Reads memory from another process’s address space.     |
+| **WriteProcessMemory** | Copies data into another process's memory space.       |
+| **ReadProcessMemory**  | Reads memory from another process's address space.     |
 
 
 #### Memory Manipulation
@@ -250,7 +250,7 @@
 | **NtAllocateVirtualMemory** | Native API to reserve or commit virtual memory.               |
 | **NtProtectVirtualMemory**  | Native call to modify memory protection attributes.           |
 | **NtReadVirtualMemoryEx**   | Reads memory from a process using extended native parameters. |
-| **NtWriteVirtualMemory**    | Writes data into a process’s virtual memory via native API.   |
+| **NtWriteVirtualMemory**    | Writes data into a process's virtual memory via native API.   |
 
 #### Object Duplication
 
@@ -291,7 +291,7 @@
 | **UuidFromStringA**             | Converts a UUID string into its binary representation.             |
 | **DebugActiveProcessStop**      | Detaches a debugger from a target process.                         |
 | **LocalAlloc**                  | Allocates memory from the local heap.                              |
-| **Toolhelp32ReadProcessMemory** | Reads another process’s memory using Toolhelp snapshot APIs.       |
+| **Toolhelp32ReadProcessMemory** | Reads another process's memory using Toolhelp snapshot APIs.       |
 
 
 ### Synchronization
@@ -345,7 +345,7 @@
 | **SetEnvironmentVariableA** | Modifies or creates environment variables at runtime.                   |
 | **EnumSystemLocalesA**      | Enumerates available system locales, often used for environment checks. |
 | **GetLocaleInfoA**          | Retrieves locale-specific configuration information.                    |
-| **GetSystemDefaultLCID**    | Returns the system’s default locale identifier.                         |
+| **GetSystemDefaultLCID**    | Returns the system's default locale identifier.                         |
 
 #### Anti-Forensic File Manipulation
 
@@ -477,10 +477,10 @@
 
 | Technical Term           | One-Liner Explanation                                       |
 | ------------------------ | ----------------------------------------------------------- |
-| **GetMessageA**          | Retrieves messages from a thread’s message queue.           |
+| **GetMessageA**          | Retrieves messages from a thread's message queue.           |
 | **PeekMessageA**         | Checks for messages without blocking execution.             |
-| **PostMessageA**         | Posts a message to a window’s message queue asynchronously. |
-| **PostThreadMessageA**   | Posts a message directly to another thread’s message queue. |
+| **PostMessageA**         | Posts a message to a window's message queue asynchronously. |
+| **PostThreadMessageA**   | Posts a message directly to another thread's message queue. |
 | **SendMessageA**         | Sends a message and waits for it to be processed.           |
 | **SendMessageCallbackA** | Sends a message with a callback once processing completes.  |
 | **SendMessageTimeoutA**  | Sends a message with a timeout to avoid blocking.           |
@@ -525,5 +525,5 @@
 ---
 
 <p align="right">
-  Last Updated - December 2025
+ <b>Last Updated - December 2025</b> 
 </p>
