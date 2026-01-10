@@ -260,7 +260,7 @@ Open an issue or contact [me](mailto:vasandilaksan@gmail.com) through mail.
 
 ---
 
-**© 2025 MALFORGE | Licensed under MIT**
+**© 2026 MALFORGE | Licensed under MIT**
 
 *Built with ❤️ for the security research community*
 
