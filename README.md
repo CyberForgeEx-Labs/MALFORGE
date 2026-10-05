@@ -209,7 +209,7 @@ Users must:
 
 ### Disclaimer
 
-**THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.** The authors and contributors are not responsible for any misuse, damage, or legal consequences resulting from the use of this code. This project is intended solely for educational purposes and authorized security research.
+**THE CODE SAMPLES ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.** The authors and contributors are not responsible for any misuse, damage, or legal consequences resulting from the use of these code samples. These code samples are intended solely for educational purposes and authorized security research.
 
 ---
 
