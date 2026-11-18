@@ -233,6 +233,7 @@ Entry #3:
 
 ### Resource Analysis Tools
 - Resource Hacker
+- [Resource Cracker](https://www.pelock.com/products/resource-cracker)
 - PE Explorer
 - CFF Explorer
 - Resource Tuner
